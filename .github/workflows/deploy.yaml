@@ -16,8 +16,6 @@ jobs:
 
         steps:
             -   uses: actions/checkout@v2
-                with:
-                    persist-credentials: false
 
             -   uses: shivammathur/setup-php@v2
                 with:
@@ -27,7 +25,7 @@ jobs:
             -   uses: "ramsey/composer-install@v1"
 
             # generate website to /output directory
-            -   run: bin/console dump-static-site --ansi
+            -   run: bin/console dump-static-site --ansi --debug
 
             # see https://github.com/JamesIves/github-pages-deploy-action
             -
