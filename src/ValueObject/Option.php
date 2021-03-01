@@ -20,4 +20,14 @@ final class Option
      * @var string
      */
     public const EXCLUDED_FRAMEWORK_PACKAGES = 'excluded_framework_packages';
+
+    /**
+     * @var string
+     */
+    public const MINIMAL_MONTH_AGE = 'minimal_month_age';
+
+    /**
+     * @var string
+     */
+    public const MIN_DOWNLOADS_LIMIT = 'min_downloads_limit';
 }

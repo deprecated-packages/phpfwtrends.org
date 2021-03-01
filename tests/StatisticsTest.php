@@ -22,12 +22,13 @@ final class StatisticsTest extends AbstractKernelTestCase
     protected function setUp(): void
     {
         $this->bootKernel(PhpFwTrendsKernel::class);
-        $this->statistics = self::$container->get(Statistics::class);
+        $this->statistics = $this->getService(Statistics::class);
     }
 
     public function test(): void
     {
         $monthlyValuesByMonth = $this->statistics->expandDailyAverageToMonthTotal(self::AVERAGE_DAILY_VALUES_BY_MONTH);
+
         $this->assertSame([
             '2019-12' => 9_300,
         ], $monthlyValuesByMonth);

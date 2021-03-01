@@ -5,31 +5,24 @@ declare(strict_types=1);
 namespace TomasVotruba\PhpFwTrends\Result;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\PhpFwTrends\Exception\ShouldNotHappenException;
 use TomasVotruba\PhpFwTrends\Packagist\PackageMonthlyDownloadsProvider;
 use TomasVotruba\PhpFwTrends\Packagist\Purifier\PHPStanNettePackagesPurifier;
 use TomasVotruba\PhpFwTrends\Sorter;
 use TomasVotruba\PhpFwTrends\Statistics;
+use TomasVotruba\PhpFwTrends\ValueObject\Option;
 use TomasVotruba\PhpFwTrends\ValueObject\PackageData;
 
 final class PackageDataFactory
 {
-    /**
-     * @var int
-     */
-    private const MINIMAL_MONTH_AGE = 24;
-
-    /**
-     * @var int
-     */
-    private const MIN_DOWNLOADS_LIMIT = 1_000;
-
     public function __construct(
         private PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         private PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier,
         private Statistics $statistics,
         private Sorter $sorter,
-        private SymfonyStyle $symfonyStyle
+        private SymfonyStyle $symfonyStyle,
+        private ParameterProvider $parameterProvider
     ) {
     }
 
@@ -41,6 +34,9 @@ final class PackageDataFactory
     {
         $packagesData = [];
 
+        $minimalMonthAge = $this->parameterProvider->provideIntParameter(Option::MINIMAL_MONTH_AGE);
+        $chunkSize = $minimalMonthAge / 2;
+
         foreach ($packageNames as $packageName) {
             $monthlyDownloads = $this->packageMonthlyDownloadsProvider->provideForPackage($packageName);
 
@@ -48,24 +44,25 @@ final class PackageDataFactory
                 continue;
             }
 
-            // total downloads for 1st year
-            $last12Months = $this->getChunkAndExpandDailyAverageToMonthAndSum($monthlyDownloads, 12, 0);
-            // total downloads for 2nd years
-            $previous12Months = $this->getChunkAndExpandDailyAverageToMonthAndSum($monthlyDownloads, 12, 1);
+            // total downloads for 1st half
+            $youngerChunk = $this->getChunkAndExpandDailyAverageToMonthAndSum($monthlyDownloads, $chunkSize, 0);
 
-            if ($previous12Months === 0) {
+            // total downloads for 2nd half
+            $olderChunk = $this->getChunkAndExpandDailyAverageToMonthAndSum($monthlyDownloads, $chunkSize, 1);
+
+            if ($olderChunk === 0) {
                 // to prevent fatal errors
                 continue;
             }
 
-            $last12Months = $this->phpStanNettePackagesPurifier->correctLastYearDownloads($last12Months, $packageName);
+            $youngerChunk = $this->phpStanNettePackagesPurifier->correctLastYearDownloads($youngerChunk, $packageName);
 
-            $previous12Months = $this->phpStanNettePackagesPurifier->correctPreviousYearDownloads(
-                $previous12Months,
+            $olderChunk = $this->phpStanNettePackagesPurifier->correctPreviousYearDownloads(
+                $olderChunk,
                 $packageName
             );
 
-            $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100;
+            $lastYearTrend = 100 * ($youngerChunk / $olderChunk) - 100;
             if ($lastYearTrend > 300) {
                 // too huge trend
                 continue;
@@ -77,8 +74,8 @@ final class PackageDataFactory
                 $packageName,
                 // numbers
                 $lastYearTrend,
-                $last12Months,
-                $previous12Months
+                $youngerChunk,
+                $olderChunk
             );
         }
 
@@ -90,13 +87,15 @@ final class PackageDataFactory
      */
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
+        $minimalMonthAge = $this->parameterProvider->provideIntParameter(Option::MINIMAL_MONTH_AGE);
+
         // not enough data, package younger than 24 months → skip it
-        if (count($monthlyDownloads) < self::MINIMAL_MONTH_AGE - 1) {
+        if (count($monthlyDownloads) < $minimalMonthAge - 1) {
             $skippingReasonMessage = sprintf(
                 'Skipping "%s" package for not enough data. %d months provided, %d needed',
                 $packageName,
                 count($monthlyDownloads),
-                self::MINIMAL_MONTH_AGE
+                $minimalMonthAge
             );
             $this->symfonyStyle->note($skippingReasonMessage);
 
@@ -107,6 +106,7 @@ final class PackageDataFactory
         $lastMonthDailyDownloads = $monthlyDownloads[$firstKey];
 
         if ($lastMonthDailyDownloads < 0) {
+            // monthly downloads are in minus
             throw new ShouldNotHappenException(sprintf(
                 'Last month daily downloads for "%s" package and "%s" month is in minus: %d',
                 $packageName,
@@ -115,13 +115,15 @@ final class PackageDataFactory
             ));
         }
 
+        $minDownloadsLimit = $this->parameterProvider->provideIntParameter(Option::MIN_DOWNLOADS_LIMIT);
+
         // too small package → skip it
-        if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {
+        if ($lastMonthDailyDownloads <= $minDownloadsLimit) {
             $skippingReasonMessage = sprintf(
                 'Skipping "%s" package for not enough downloads last month. %d provided, %d needed',
                 $packageName,
                 $lastMonthDailyDownloads,
-                self::MIN_DOWNLOADS_LIMIT
+                $minDownloadsLimit
             );
             $this->symfonyStyle->note($skippingReasonMessage);
 

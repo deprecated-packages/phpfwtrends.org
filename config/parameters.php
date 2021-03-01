@@ -8,6 +8,12 @@ use TomasVotruba\PhpFwTrends\ValueObject\Option;
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
+    // minimal age of package in moths
+    $parameters->set(Option::MINIMAL_MONTH_AGE, 12);
+
+    // minimal monthly downloads to avoid micro packages in stats
+    $parameters->set(Option::MIN_DOWNLOADS_LIMIT, 500);
+
     $parameters->set(Option::FRAMEWORKS_VENDOR_TO_NAME, [
         'nette' => 'Nette',
         'symfony' => 'Symfony',

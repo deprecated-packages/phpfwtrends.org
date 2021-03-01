@@ -16,8 +16,7 @@ final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCas
     protected function setUp(): void
     {
         $this->bootKernel(PhpFwTrendsKernel::class);
-
-        $this->packageRawMonthlyDownloadsProvider = self::$container->get(PackageRawMonthlyDownloadsProvider::class);
+        $this->packageRawMonthlyDownloadsProvider = $this->getService(PackageRawMonthlyDownloadsProvider::class);
     }
 
     public function test(): void

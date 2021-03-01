@@ -9,69 +9,40 @@ use TomasVotruba\PhpFwTrends\Packagist\PackageRawMonthlyDownloadsProvider;
 final class InterveningPackagesPurifier
 {
     /**
-     * @var string[][]
+     * @var array<string, string[]>
      */
     private const INTERVENING_DEPENDENCIES = [
-        // https://packagist.org/packages/friendsofphp/php-cs-fixer
-        'friendsofphp/php-cs-fixer' => [
-            'symfony/console',
-            'symfony/event-dispatcher',
-            'symfony/filesystem',
-            'symfony/finder',
-            'symfony/options-resolver',
-            'symfony/polyfill-php70',
-            'symfony/polyfill-php72',
-            'symfony/process',
-            'symfony/stopwatch',
-            // consequently
-            'symfony/contracts',
-            'symfony/polyfill-mbstring',
-            'symfony/polyfill-ctype',
-        ],
-        // https://packagist.org/packages/robmorgan/phinx
-        'robmorgan/phinx' => [
-            'symfony/console',
-            'symfony/config',
-            'symfony/yaml',
-            // consequently
-            'symfony/contracts',
-            'symfony/polyfill-mbstring',
-            'symfony/filesystem',
-            'symfony/polyfill-ctype',
-        ],
         // https://packagist.org/packages/laravel/framework
         'laravel/framework' => [
             'symfony/console',
-            'symfony/debug',
+            'symfony/error-handler',
             'symfony/finder',
+            'symfony/mime',
             'symfony/http-foundation',
             'symfony/http-kernel',
             'symfony/process',
             'symfony/routing',
             'symfony/var-dumper',
-            // consequently
-            'symfony/contracts',
-            'symfony/polyfill-mbstring',
-            'symfony/contracts',
-            'symfony/event-dispatcher',
-            'symfony/http-foundation',
-            'symfony/debug',
-            'symfony/polyfill-ctype',
-            'symfony/polyfill-php72',
         ],
         // particular laravel to symfony deps
-        'illuminate/queue' => ['symfony/debug', 'symfony/process'],
-        'illuminate/http' => ['symfony/http-foundation', 'symfony/http-kernel'],
-        'illuminate/validation' => ['symfony/http-foundation'],
+        // @see https://packagist.org/packages/illuminate/queue
+        'illuminate/queue' => ['symfony/process'],
+        // @see https://packagist.org/packages/illuminate/http
+        'illuminate/http' => ['symfony/http-foundation', 'symfony/http-kernel', 'symfony/mime'],
+        // @see https://packagist.org/packages/illuminate/validation
+        'illuminate/validation' => ['symfony/http-foundation', 'symfony/mime'],
+        // @see https://packagist.org/packages/illuminate/session
         'illuminate/session' => ['symfony/finder', 'symfony/http-foundation'],
+        // @see https://packagist.org/packages/illuminate/console
         'illuminate/console' => ['symfony/console', 'symfony/process'],
-        'illuminate/view' => ['symfony/debug'],
+        // @see https://packagist.org/packages/illuminate/filesystem
         'illuminate/filesystem' => ['symfony/finder'],
-        'illuminate/routing' => ['symfony/debug', 'symfony/http-foundation', 'symfony/http-kernel', 'symfony/routing'],
+        // @see https://packagist.org/packages/illuminate/routing
+        'illuminate/routing' => ['symfony/http-foundation', 'symfony/http-kernel', 'symfony/routing'],
     ];
 
     /**
-     * @var mixed[][]
+     * @var array<string, array<string, int>>
      */
     private array $interveningPackagesDownloads = [];
 
