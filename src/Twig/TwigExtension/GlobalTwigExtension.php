@@ -22,9 +22,12 @@ final class GlobalTwigExtension extends AbstractExtension implements GlobalsInte
     public function getGlobals(): array
     {
         $minimalMonthAge = $this->parameterProvider->provideIntParameter(Option::MINIMAL_MONTH_AGE);
+        $minDownloadsLimit = $this->parameterProvider->provideIntParameter(Option::MIN_DOWNLOADS_LIMIT);
 
         return [
             'site_title' => 'PHP Framework Trends',
+            'minimal_month_age' => $minimalMonthAge,
+            'min_downloads_limit' => $minDownloadsLimit,
             'chunk_size_in_months' => $minimalMonthAge / 2,
         ];
     }
