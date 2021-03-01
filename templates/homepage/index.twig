@@ -15,12 +15,11 @@
         </p>
 
         <p>
-            ...Why was this table created?...
+            ...Why was this table created? - toto new page?
         <p>
 
-        <div class="alert alert-sm alert-warning mt-3 mb-4">
-            <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/88cd6f3c8ae14ec9770f38bfea6300f88089def7/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
-        </div>
+        @todo methodgolo
+
 
         <table class="table table-bordered table-responsive table-striped sortable_table" id="main_table">
             <thead class="thead-inverse">
@@ -87,30 +86,6 @@
                 {% endfor %}
             </table>
         {% endfor %}
-
-        <h2 class="mb-4" id="methodology">Methodology Notes</h2>
-
-        <p>Few outlier packages were removed to make numbers more relevant. To be specific:</p>
-
-        <ul>
-            <li><code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads = when you download Laravel package, it will not count into Symfony download; see <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/b8d21d722639a7f299689b501835d2036582c71c/packages/FrameworkStats/src/Packagist/Purifier/InterveningPackagesPurifier.php#L19">full list of cleared packages</a></li>
-
-            <li>
-                packages with <strong>less than 1000 downloads daily</strong> - not relevant in this scale
-            </li>
-            <li>packages with <strong>history shorter than 24 months</strong> - we need exactly 24 months to compute stable trend</li>
-            <li>packages with <strong>year trend bigger than 300 %</strong> - they're caused by new interdependency from another framework's package that is already popular</li>
-        </ul>
-
-        <div class="alert alert-sm alert-warning mt-4 mb-4">
-            Most <strong>Nette packages were boosted by 80-90 % via <a href="https://packagist.org/packages/phpstan/phpstan/stats">phpstan/phpstan</a> downloads</strong>. This got better by PHPStan 0.12, where Nette is not direct dependency. This distortion will disappear when everyone will use PHPStan 0.12, but for now these numbers are corrected manually.
-        </div>
-
-        <br>
-
-        <p><strong>Thanks</strong> to <a href="https://github.com/jkuchar">Jan Kuchar</a> and <a href="https://github.com/garas">Edgaras Janušauskas</a> for extreme corrections. Also this
-            overview would not be possible without <a href="https://packagist.org/apidoc">Packagist API</a> built by <a href="https://seld.be">Jordi Boggiano</a> and <a href="https://twitter.com/naderman">Nils Adermann</a>.
-        </p>
     </div>
 
     {# sortable tables #}
