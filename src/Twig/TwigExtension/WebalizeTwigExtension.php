@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\PhpFwTrends\Twig;
+namespace TomasVotruba\PhpFwTrends\Twig\TwigExtension;
 
 use Nette\Utils\Strings;
 use Twig\Extension\AbstractExtension;
@@ -13,8 +13,10 @@ final class WebalizeTwigExtension extends AbstractExtension
     /**
      * @return TwigFilter[]
      */
-    public function getFilters(): iterable
+    public function getFilters(): array
     {
-        yield new TwigFilter('webalize', fn (string $content): string => Strings::webalize($content));
+        return [
+            new TwigFilter('webalize', fn (string $content): string => Strings::webalize($content)),
+        ];
     }
 }

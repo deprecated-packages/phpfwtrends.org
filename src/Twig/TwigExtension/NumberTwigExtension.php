@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\PhpFwTrends\Twig;
+namespace TomasVotruba\PhpFwTrends\Twig\TwigExtension;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;

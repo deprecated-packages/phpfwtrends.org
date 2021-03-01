@@ -20,6 +20,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'illuminate' => 'Laravel',
         'cakephp' => 'CakePHP',
         'zendframework' => 'Zend',
+        'laminas' => 'Laminas',
         'yiisoft' => 'Yii',
         'doctrine' => 'Doctrine',
     ]);
