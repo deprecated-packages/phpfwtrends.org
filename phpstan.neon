@@ -38,3 +38,11 @@ parameters:
 
     ignoreErrors:
         - '#Method TomasVotruba\\PhpFwTrends\\Result\\PackageDataFactory\:\:createPackagesData\(\) should return array<TomasVotruba\\PhpFwTrends\\ValueObject\\PackageData\> but returns array<TomasVotruba\\PhpFwTrends\\Contract\\LastYearTrendAwareInterface\>#'
+        -
+            message: '#Use value object over return of values#'
+            paths:
+                - src/Result/VendorDataFactory.php
+        -
+            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
+            paths:
+                - src/Result/VendorDataFactory.php

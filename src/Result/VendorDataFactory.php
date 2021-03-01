@@ -24,7 +24,7 @@ final class VendorDataFactory
 
     /**
      * @param string[] $frameworksVendorToName
-     * @return array<string, array<string, mixed|VendorData>
+     * @return array<string, mixed|array<string, VendorData>>
      */
     public function createVendorsData(array $frameworksVendorToName): array
     {
@@ -42,11 +42,11 @@ final class VendorDataFactory
         $vendorsData = $this->sorter->sortArrayByLastYearTrend($vendorsData);
 
         // metadata
-        $data['vendors'] = $vendorsData;
-        $nowDateTime = new DateTime();
-        $data['updated_at'] = $nowDateTime->format('Y-m-d H:i:s');
-
-        return $data;
+        $nowDateTime = DateTime::from('now');
+        return [
+            'vendors' => $vendorsData,
+            'updated_at' => $nowDateTime->format('Y-m-d H:i:s'),
+        ];
     }
 
     private function createVendorData(string $vendorName, string $frameworkName): VendorData
