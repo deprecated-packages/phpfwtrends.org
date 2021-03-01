@@ -1,0 +1,21 @@
+/output
+/vendor
+/node_modules
+composer.lock
+package-lock.json
+*.local.yaml
+
+.phpunit.result.cache
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
