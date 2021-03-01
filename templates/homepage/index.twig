@@ -73,6 +73,7 @@
                     </tr>
                 </thead>
                 {% for package in framework.packages_data %}
+                    {# @var package \TomasVotruba\PhpFwTrends\ValueObject\PackageData #}
                     <tr>
                         <td>
                             <a href="https://packagist.org/packages/{{ package.package_name }}/stats">
