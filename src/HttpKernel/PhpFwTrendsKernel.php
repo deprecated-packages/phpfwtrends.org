@@ -7,10 +7,9 @@ namespace TomasVotruba\PhpFwTrends\HttpKernel;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
-final class PhpFwTrendsKernel extends Kernel
+final class PhpFwTrendsKernel extends \Symfony\Component\HttpKernel\Kernel
 {
     use MicroKernelTrait;
 
