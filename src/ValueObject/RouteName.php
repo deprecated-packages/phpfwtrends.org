@@ -15,4 +15,9 @@ final class RouteName
      * @var string
      */
     public const METHODOLOGY = 'methodology';
+
+    /**
+     * @var string
+     */
+    public const FRAMEWORK = 'framework';
 }
