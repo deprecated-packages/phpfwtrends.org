@@ -1,0 +1,8 @@
+{
+    "doctrine/cache": {
+        "version": "1.10.2"
+    },
+    "webmozart/assert": {
+        "version": "1.9.1"
+    }
+}
