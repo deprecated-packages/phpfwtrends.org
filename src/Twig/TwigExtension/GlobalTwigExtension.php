@@ -17,7 +17,7 @@ final class GlobalTwigExtension extends AbstractExtension implements GlobalsInte
     }
 
     /**
-     * @return array<string, int>
+     * @return array<string, mixed>
      */
     public function getGlobals(): array
     {
