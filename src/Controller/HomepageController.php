@@ -23,7 +23,7 @@ final class HomepageController extends AbstractController
     {
         $phpFrameworkTrends = $this->parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS);
 
-        return $this->render(__DIR__ . '/../../templates/index.twig', [
+        return $this->render('homepage/index.twig', [
             'title' => 'PHP Framework Trends',
             'promo_post_url' => 'https://tomasvotruba.com/blog/2019/04/11/trends-of-php-frameworks-in-numbers/',
             'php_framework_trends' => $phpFrameworkTrends,

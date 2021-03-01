@@ -6,7 +6,7 @@ namespace TomasVotruba\PhpFwTrends\Tests\Packagist;
 
 use Nette\Utils\DateTime;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
-use TomasVotruba\PhpFwTrends\HttpKernel\TomasVotrubaKernel;
+use TomasVotruba\PhpFwTrends\HttpKernel\PhpFwTrendsKernel;
 use TomasVotruba\PhpFwTrends\Packagist\PackageRawMonthlyDownloadsProvider;
 
 final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCase
@@ -15,7 +15,7 @@ final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCas
 
     protected function setUp(): void
     {
-        $this->bootKernel(TomasVotrubaKernel::class);
+        $this->bootKernel(PhpFwTrendsKernel::class);
 
         $this->packageRawMonthlyDownloadsProvider = self::$container->get(PackageRawMonthlyDownloadsProvider::class);
     }

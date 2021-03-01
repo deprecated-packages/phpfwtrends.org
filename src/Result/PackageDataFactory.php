@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\PhpFwTrends\Result;
 
-use Symfony\Component\Asset\Package;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\PhpFwTrends\Exception\ShouldNotHappenException;
 use TomasVotruba\PhpFwTrends\Packagist\PackageMonthlyDownloadsProvider;
@@ -143,7 +142,6 @@ final class PackageDataFactory
         $chunks = array_chunk($dataByYearMonth, $chunkSize, true);
 
         $chunk = $chunks[$chunkPosition];
-
         $expandedChunk = $this->statistics->expandDailyAverageToMonthTotal($chunk);
 
         return (int) array_sum($expandedChunk);

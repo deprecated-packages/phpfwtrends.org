@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\PhpFwTrends\Tests;
 
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
-use TomasVotruba\PhpFwTrends\HttpKernel\TomasVotrubaKernel;
+use TomasVotruba\PhpFwTrends\HttpKernel\PhpFwTrendsKernel;
 use TomasVotruba\PhpFwTrends\Statistics;
 
 final class StatisticsTest extends AbstractKernelTestCase
@@ -21,8 +21,7 @@ final class StatisticsTest extends AbstractKernelTestCase
 
     protected function setUp(): void
     {
-        $this->bootKernel(TomasVotrubaKernel::class);
-
+        $this->bootKernel(PhpFwTrendsKernel::class);
         $this->statistics = self::$container->get(Statistics::class);
     }
 

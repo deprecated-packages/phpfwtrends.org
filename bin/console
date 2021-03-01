@@ -4,7 +4,7 @@
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\ErrorHandler\Debug;
-use TomasVotruba\PhpFwTrends\HttpKernel\TomasVotrubaKernel;
+use TomasVotruba\PhpFwTrends\HttpKernel\PhpFwTrendsKernel;
 
 set_time_limit(0);
 
@@ -29,6 +29,6 @@ if ($_SERVER['APP_DEBUG']) {
     }
 }
 
-$kernel = new TomasVotrubaKernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
+$kernel = new PhpFwTrendsKernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
 $application = new Application($kernel);
 $application->run($input);

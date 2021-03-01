@@ -23,7 +23,9 @@ parameters:
         - bin
         - src
         - tests
-        - config
+        - config/config.php
+        - config/parameters.php
+        - config/_data
         - ecs.php
         - rector.php
 
@@ -32,3 +34,7 @@ parameters:
     excludes_analyse:
         # generated file
         - config/_data/generated/*
+
+
+    ignoreErrors:
+        - '#Method TomasVotruba\\PhpFwTrends\\Result\\PackageDataFactory\:\:createPackagesData\(\) should return array<TomasVotruba\\PhpFwTrends\\ValueObject\\PackageData\> but returns array<TomasVotruba\\PhpFwTrends\\Contract\\LastYearTrendAwareInterface\>#'

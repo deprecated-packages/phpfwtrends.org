@@ -50,7 +50,7 @@ jobs:
                     token: ${{ secrets.GITHUB_TOKEN }}
                     title: "${{ matrix.actions.name }}"
                     commit-message: "${{ matrix.actions.name }}"
-                    base: "master"
+                    base: "main"
                     delete-branch: true
                     author: "kaizen-ci <info@kaizen-ci.org>"
                     committer: "kaizen-ci <info@kaizen-ci.org>"
