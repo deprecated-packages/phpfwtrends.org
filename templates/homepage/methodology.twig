@@ -20,10 +20,14 @@
         @todo use global variables!
 
             <li>
-                packages with <strong>less than __TODO___ downloads daily</strong> - not relevant in this scale
+                packages with <strong>less than {{ min_downloads_limit }} downloads daily</strong> - not relevant in this scale
             </li>
-            <li>packages with <strong>history shorter than __TODO__ months</strong> - we need exactly 24 months to compute stable trend</li>
-            <li>packages with <strong>year trend bigger than __TODO_ %</strong> - they're caused by new interdependency from another framework's package that is already popular</li>
+            <li>
+                packages with <strong>history shorter than {{ minimal_month_age }}__TODO__ months</strong> - we need                 {{ minimal_month_age }} months to compute stable trend
+            </li>
+            <li>
+                packages with <strong>year trend bigger than 300 %</strong> - they're probably caused by new interdependency from same framework's package
+            </li>
         </ul>
     </div>
 
