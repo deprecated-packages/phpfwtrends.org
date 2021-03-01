@@ -30,7 +30,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.18",
         "phpstan/phpstan": "^0.12.80",
-        "phpunit/phpunit": "^10.0.x-dev",
+        "phpunit/phpunit": "^0.9",
         "rector/rector-prefixed": "^0.9",
         "spatie/http-status-check": "^3.3",
         "symfony/var-dumper": "^5.2",
@@ -60,7 +60,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
