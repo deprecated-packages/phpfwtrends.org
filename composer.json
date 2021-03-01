@@ -23,6 +23,7 @@
         "symplify/amnesia": "^9.2.4",
         "symplify/autowire-array-parameter": "^9.2",
         "symplify/package-builder": "^9.2.4",
+        "symplify/php-config-printer": "^9.2.4",
         "symplify/smart-file-system": "^9.2.4",
         "symplify/symfony-static-dumper": "^9.2.4",
         "twig/twig": "^3.0"
