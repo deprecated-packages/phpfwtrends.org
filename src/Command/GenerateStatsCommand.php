@@ -22,23 +22,14 @@ final class GenerateStatsCommand extends Command
      */
     private const VENDORS = 'vendors';
 
-    /**
-     * @var array<string, string>
-     */
-    private array $frameworksVendorToName = [];
-
     public function __construct(
         private SymfonyStyle $symfonyStyle,
         private VendorDataFactory $vendorDataFactory,
         private VendorDataMapper $vendorDataMapper,
-        ParameterProvider $parameterProvider,
+        private ParameterProvider $parameterProvider,
         private ParametersConfigDumper $parametersConfigDumper
     ) {
         parent::__construct();
-
-        $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(
-            Option::FRAMEWORKS_VENDOR_TO_NAME
-        );
     }
 
     protected function configure(): void
@@ -48,7 +39,8 @@ final class GenerateStatsCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $vendorsData = $this->vendorDataFactory->createVendorsData($this->frameworksVendorToName);
+        $frameworksVendorToName = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
+        $vendorsData = $this->vendorDataFactory->createVendorsData($frameworksVendorToName);
 
         foreach ($vendorsData[self::VENDORS] as $key => $vendorData) {
             $vendorsData[self::VENDORS][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
