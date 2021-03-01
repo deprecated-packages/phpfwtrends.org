@@ -1,0 +1,34 @@
+includes:
+    - vendor/symplify/phpstan-extensions/config/config.neon
+    - vendor/symplify/phpstan-rules/config/symplify-rules.neon
+
+services:
+    -
+        class: Symplify\PHPStanRules\Rules\RequireMethodCallArgumentConstantRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            constantArgByMethodByType:
+                Symfony\Component\DependencyInjection\Loader\Configurator\ParametersConfigurator:
+                    set: [0]
+                Symplify\PackageBuilder\Parameter\ParameterProvider:
+                    provideArrayParameter: [0]
+                    provideStringParameter: [0]
+                    provideIntParameter: [0]
+
+parameters:
+    bootstrapFiles:
+        - vendor/rector/rector-prefixed/vendor/autoload.php
+
+    paths:
+        - bin
+        - src
+        - tests
+        - config
+        - ecs.php
+        - rector.php
+
+    level: max
+
+    excludes_analyse:
+        # generated file
+        - config/_data/generated/*
