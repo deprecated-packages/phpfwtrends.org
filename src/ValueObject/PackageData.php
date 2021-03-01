@@ -22,12 +22,26 @@ final class PackageData implements LastYearTrendAwareInterface
     public function __construct(
         private string $packageName,
         private float $lastYearTrend,
-        private int $last12Months,
-        private int $previous12Months
+        private int $youngerChunk,
+        private int $olderChunk
     ) {
         $this->packageShortName = (string) Strings::after($packageName, '/');
 
         $this->packageKey = Strings::replace($packageName, self::DASH_OR_SLASH_REGEX, '_');
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function __toArray(): array
+    {
+        return [
+            'package_name' => $this->packageName,
+            'package_short_name' => $this->packageShortName,
+            'younger_chunk' => $this->youngerChunk,
+            'older_chunk' => $this->olderChunk,
+            'last_year_trend' => $this->lastYearTrend,
+        ];
     }
 
     public function getPackageName(): string
@@ -40,23 +54,18 @@ final class PackageData implements LastYearTrendAwareInterface
         return $this->lastYearTrend;
     }
 
-    public function getLast12Months(): int
+    public function getYoungerChunk(): int
     {
-        return $this->last12Months;
+        return $this->youngerChunk;
     }
 
-    public function getPrevious12Months(): int
+    public function getOlderChunk(): int
     {
-        return $this->previous12Months;
+        return $this->olderChunk;
     }
 
     public function getPackageShortName(): string
     {
         return $this->packageShortName;
-    }
-
-    public function getPackageKey(): string
-    {
-        return $this->packageKey;
     }
 }

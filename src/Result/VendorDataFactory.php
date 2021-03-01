@@ -33,7 +33,6 @@ final class VendorDataFactory
         foreach ($frameworksVendorToName as $vendorName => $frameworkName) {
             $title = sprintf('Loading data for "%s" vendor', $vendorName);
             $this->symfonyStyle->title($title);
-
             $vendorsData[$vendorName] = $this->createVendorData($vendorName, $frameworkName);
 
             $this->symfonyStyle->newLine(2);

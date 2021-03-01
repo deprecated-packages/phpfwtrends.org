@@ -80,8 +80,8 @@
                             </a>
                         </td>
                         <td class="text-right text-nowrap" data-order="{{ package.last_year_trend }}">{{ macros.trend(package.last_year_trend) }}</td>
-                        <td class="text-right text-nowrap" data-order="{{ package.last_12_months }}">{{ macros.number(package.last_12_months) }}</td>
-                        <td class="text-right text-nowrap" data-order="{{ package.previous_12_months }}">{{ macros.number(package.previous_12_months) }}</td>
+                        <td class="text-right text-nowrap" data-order="{{ package.younger_chunk }}">{{ macros.number(package.younger_chunk) }}</td>
+                        <td class="text-right text-nowrap" data-order="{{ package.older_chunk }}">{{ macros.number(package.older_chunk) }}</td>
                     </tr>
                 {% endfor %}
             </table>

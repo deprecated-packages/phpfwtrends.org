@@ -20,6 +20,25 @@ final class VendorData implements LastYearTrendAwareInterface
     ) {
     }
 
+    /**
+     * @return array<string, mixed>
+     */
+    public function __toArray(): array
+    {
+        $packagesDataAsArray = [];
+        foreach ($this->packagesData as $packageData) {
+            $packagesDataAsArray[] = $packageData->__toArray();
+        }
+
+        return [
+            'vendor_name' => $this->vendorName,
+            'vendor_total_last_year' => $this->vendorTotalLastYear,
+            'vendor_total_previous_year' => $this->vendorTotalPreviousYear,
+            'last_year_trend' => $this->lastYearTrend,
+            'packages_data' => $packagesDataAsArray,
+        ];
+    }
+
     public function getVendorName(): string
     {
         return $this->vendorName;
