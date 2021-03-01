@@ -24,6 +24,7 @@ final class GlobalTwigExtension extends AbstractExtension implements GlobalsInte
         $minimalMonthAge = $this->parameterProvider->provideIntParameter(Option::MINIMAL_MONTH_AGE);
 
         return [
+            'site_title' => 'PHP Framework Trends',
             'chunk_size_in_months' => $minimalMonthAge / 2,
         ];
     }
