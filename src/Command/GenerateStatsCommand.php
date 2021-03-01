@@ -11,7 +11,6 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\PhpFwTrends\FileSystem\ParametersConfigDumper;
-use TomasVotruba\PhpFwTrends\Mapper\VendorDataMapper;
 use TomasVotruba\PhpFwTrends\Result\VendorDataFactory;
 use TomasVotruba\PhpFwTrends\ValueObject\Option;
 
@@ -25,7 +24,6 @@ final class GenerateStatsCommand extends Command
     public function __construct(
         private SymfonyStyle $symfonyStyle,
         private VendorDataFactory $vendorDataFactory,
-        private VendorDataMapper $vendorDataMapper,
         private ParameterProvider $parameterProvider,
         private ParametersConfigDumper $parametersConfigDumper
     ) {
@@ -43,7 +41,7 @@ final class GenerateStatsCommand extends Command
         $vendorsData = $this->vendorDataFactory->createVendorsData($frameworksVendorToName);
 
         foreach ($vendorsData[self::VENDORS] as $key => $vendorData) {
-            $vendorsData[self::VENDORS][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
+            $vendorsData[self::VENDORS][$key] = $vendorData->__toArray();
         }
 
         $fileInfo = $this->parametersConfigDumper->dumpPhp(Option::PHP_FRAMEWORK_TRENDS, $vendorsData);

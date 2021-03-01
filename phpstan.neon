@@ -45,4 +45,5 @@ parameters:
         -
             message: '#Array with keys is not allowed\. Use value object to pass data instead#'
             paths:
+                - src/ValueObject
                 - src/Result/VendorDataFactory.php

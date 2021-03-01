@@ -15,7 +15,7 @@ final class Summer
     {
         $total = 0;
         foreach ($packagesData as $packageData) {
-            $total += $packageData->getLast12Months();
+            $total += $packageData->getYoungerChunk();
         }
 
         return $total;
@@ -28,7 +28,7 @@ final class Summer
     {
         $total = 0;
         foreach ($packagesData as $packageData) {
-            $total += $packageData->getPrevious12Months();
+            $total += $packageData->getOlderChunk();
         }
 
         return $total;

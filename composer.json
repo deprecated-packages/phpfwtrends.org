@@ -7,7 +7,6 @@
         "doctrine/cache": "^1.10",
         "guzzlehttp/guzzle": "^7.2",
         "j7mbo/twitter-api-php": "^1.0",
-        "kevinrob/guzzle-cache-middleware": "^3.3",
         "nette/finder": "^2.5",
         "nette/utils": "^3.2",
         "spatie/packagist-api": "^2.0.2",
