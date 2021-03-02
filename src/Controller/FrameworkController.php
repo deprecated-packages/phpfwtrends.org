@@ -25,7 +25,7 @@ final class FrameworkController extends AbstractController
 
         return $this->render('homepage/methodology.twig', [
             'title' => 'PHP Framework Trends',
-            'framework_trend' => $phpFrameworkTrends[$frameworkName]
+            'framework_trend' => $phpFrameworkTrends[$frameworkName],
         ]);
     }
 }
