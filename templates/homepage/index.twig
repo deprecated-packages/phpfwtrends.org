@@ -29,11 +29,11 @@
                 </tr>
             </thead>
 
-            {# @var framework \TomasVotruba\PhpFwTrends\Twig\VendorAutocomplete #}
+            {# @var framework \TomasVotruba\PhpFwTrends\ValueObject\VendorData #}
             {% for framework in php_framework_trends.vendors %}
                 <tr>
                     <td>
-                        <a href="{{ path('framework', { frameworkName: framework.vendor_name }) }}">
+                        <a href="{{ path('framework', { frameworkName: framework.vendor_key }) }}">
                             {{ framework.vendor_name }}
                         </a>
                     </td>
