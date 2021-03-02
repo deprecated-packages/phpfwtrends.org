@@ -9,7 +9,7 @@ final class RouteName
     /**
      * @var string
      */
-    public const PHP_FRAMEWORK_TRENDS = 'php-framework-trends';
+    public const HOMEPAGE = 'homepage';
 
     /**
      * @var string
