@@ -66,6 +66,7 @@
     },
     "extra": {
         "composer-patches-skip-reporting": true,
+        "enable-patching": true,
         "patches": {
             "symplify/autowire-array-parameter": [
                 "patches/symplify-autowire-array-parameter-src-dependencyinjection-compilerpass-autowirearrayparametercompilerpass-php.patch"
