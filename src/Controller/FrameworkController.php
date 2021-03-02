@@ -7,17 +7,19 @@ namespace TomasVotruba\PhpFwTrends\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symplify\EasyHydrator\ArrayToValueObjectHydrator;
 use Symplify\EasyHydrator\EasyHydratorBundle;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\PhpFwTrends\Exception\ShouldNotHappenException;
 use TomasVotruba\PhpFwTrends\ValueObject\Option;
 use TomasVotruba\PhpFwTrends\ValueObject\RouteName;
+use TomasVotruba\PhpFwTrends\ValueObject\VendorData;
 
 final class FrameworkController extends AbstractController
 {
     public function __construct(
         private ParameterProvider $parameterProvider,
-        private EasyHydratorBundle
+        private ArrayToValueObjectHydrator $arrayToValueObjectHydrator
     ) {
     }
 
@@ -29,9 +31,12 @@ final class FrameworkController extends AbstractController
             throw new ShouldNotHappenException($frameworkName);
         }
 
+        /** @var VendorData $vendorData */
+        $vendorData = $this->arrayToValueObjectHydrator->hydrateArray($frameworkTrend, VendorData::class);
+
         return $this->render('homepage/framework.twig', [
             'title' => 'PHP Framework Trends',
-            'framework_trend' => $frameworkTrend,
+            'framework_trend' => $vendorData,
         ]);
     }
 

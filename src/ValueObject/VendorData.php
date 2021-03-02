@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\PhpFwTrends\ValueObject;
 
+use Nette\Utils\Strings;
 use TomasVotruba\PhpFwTrends\Contract\LastYearTrendAwareInterface;
 
 final class VendorData implements LastYearTrendAwareInterface
@@ -18,6 +19,11 @@ final class VendorData implements LastYearTrendAwareInterface
         private float $lastYearTrend,
         private array $packagesData
     ) {
+    }
+
+    public function getVendorNameWebalized(): string
+    {
+        return Strings::webalize($this->vendorName);
     }
 
     /**

@@ -8,4 +8,5 @@ return [
     Symplify\SymfonyStaticDumper\SymfonyStaticDumperBundle::class => ['all' => true],
     Symplify\PhpConfigPrinter\Bundle\PhpConfigPrinterBundle::class => ['all' => true],
     Symplify\EasyHydrator\EasyHydratorBundle::class => ['all' => true],
+    Symplify\SimplePhpDocParser\Bundle\SimplePhpDocParserBundle::class => ['all' => true],
 ];
