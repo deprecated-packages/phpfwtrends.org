@@ -29,7 +29,7 @@
         "twig/twig": "^3.3"
     },
     "require-dev": {
-        "cweagans/composer-patches": "^1.7",
+        "cweagans/composer-patches": "dev-master as 1.7",
         "friendsofphp/php-cs-fixer": "^2.18",
         "phpstan/phpstan": "^0.12.80",
         "phpunit/phpunit": "^9.0",
@@ -40,7 +40,7 @@
         "symplify/easy-coding-standard": "dev-master",
         "symplify/phpstan-extensions": "dev-master",
         "symplify/phpstan-rules": "dev-master",
-        "symplify/vendor-patches": "^9.2"
+        "symplify/vendor-patches": "dev-master"
     },
     "autoload": {
         "psr-4": {
