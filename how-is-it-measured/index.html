@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>PHP Framework Trends | PHP Framework Trends</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+
+        <link href="/assets/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+        <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+    <body>
+        <div id="content">
+                <div class="container-fluid">
+        <h1>How is it Measured?</h1>
+
+        <h2>Laravel does not add to Symfony</h2>
+
+        <div class="alert alert-sm alert-warning mt-3 mb-4">
+            <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/88cd6f3c8ae14ec9770f38bfea6300f88089def7/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
+        </div>
+
+        <h2 class="mb-4" id="methodology">Methodology Notes</h2>
+
+        <ul>
+            <li><code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads = when you download Laravel package, it will not count into Symfony download; see <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/b8d21d722639a7f299689b501835d2036582c71c/packages/FrameworkStats/src/Packagist/Purifier/InterveningPackagesPurifier.php#L19">full list of cleared packages</a></li>
+
+        </ul>
+
+        @todo use global variables!
+
+            <li>
+                packages with <strong>less than 500 downloads daily</strong> - not relevant in this scale
+            </li>
+            <li>
+                packages with <strong>history shorter than 12__TODO__ months</strong> - we need 12 months to compute stable trend
+            </li>
+            <li>
+                packages with <strong>year trend bigger than 300 %</strong> - they're probably caused by new interdependency from same framework's package
+            </li>
+        </ul>
+    </div>
+
+        <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+        </div>
+
+        <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CM56PWY1F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8CM56PWY1F');
+</script>
+
+<script>
+    // sortable table
+    $('.sortable_table').DataTable({
+        // see https://datatables.net/examples/basic_init/filter_only.html
+        "searching": false,
+        "paging": false,
+        "info": false,
+        "order": [[1, "desc"]],
+        // see https://datatables.net/examples/advanced_init/sort_direction_control.html
+        "aoColumns": [
+            null,
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] }
+        ]
+    });
+</script>
+
+<div class="text-center mt-5" id="footer">
+    <p class="mt-2">
+        Last update
+
+        Brought by...
+
+        <a href="/how-is-it-measured">How is it Measured?</a>
+
+
+            </p>
+</div>
+    </body>
+</html>
