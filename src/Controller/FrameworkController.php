@@ -7,6 +7,7 @@ namespace TomasVotruba\PhpFwTrends\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symplify\EasyHydrator\EasyHydratorBundle;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\PhpFwTrends\Exception\ShouldNotHappenException;
 use TomasVotruba\PhpFwTrends\ValueObject\Option;
@@ -15,7 +16,8 @@ use TomasVotruba\PhpFwTrends\ValueObject\RouteName;
 final class FrameworkController extends AbstractController
 {
     public function __construct(
-        private ParameterProvider $parameterProvider
+        private ParameterProvider $parameterProvider,
+        private EasyHydratorBundle
     ) {
     }
 
