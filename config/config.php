@@ -28,8 +28,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->set(SymfonyStyle::class)
         ->factory([service(SymfonyStyleFactory::class), 'create']);
 
-    $services->set(ParameterProvider::class)
-        ->arg('$container', service('service_container'));
-
     $services->set(SmartFileSystem::class);
 };
