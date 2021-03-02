@@ -1,5 +1,12 @@
 {
     "name": "tomasvotruba/phpfwtrends-org",
+    "extra": {
+        "patches": {
+            "symplify/autowire-array-parameter": [
+                "patches/symplify-autowire-array-parameter-src-dependencyinjection-compilerpass-autowirearrayparametercompilerpass-php.patch"
+            ]
+        }
+    },
     "license": "MIT",
     "description": "Micro site with stats of PHP framework downloads - raw Packagist data over guessing and emotions",
     "require": {
@@ -29,6 +36,7 @@
         "twig/twig": "^3.3"
     },
     "require-dev": {
+        "cweagans/composer-patches": "^1.7",
         "friendsofphp/php-cs-fixer": "^2.18",
         "phpstan/phpstan": "^0.12.80",
         "phpunit/phpunit": "^9.0",
@@ -38,7 +46,8 @@
         "symplify/coding-standard": "dev-master",
         "symplify/easy-coding-standard": "dev-master",
         "symplify/phpstan-extensions": "dev-master",
-        "symplify/phpstan-rules": "dev-master"
+        "symplify/phpstan-rules": "dev-master",
+        "symplify/vendor-patches": "^9.2"
     },
     "autoload": {
         "psr-4": {
