@@ -2,6 +2,9 @@
     "cweagans/composer-patches": {
         "version": "1.7.0"
     },
+    "symplify/autowire-array-parameter": {
+        "version": "9.3-dev"
+    },
     "symplify/vendor-patches": {
         "version": "v9.2.4"
     }
