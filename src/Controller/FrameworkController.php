@@ -24,7 +24,7 @@ final class FrameworkController extends AbstractController
     {
         $frameworkTrend = $this->matchFrameworkTrend($frameworkName);
         if ($frameworkTrend === []) {
-            throw new ShouldNotHappenException($frameworkTrend);
+            throw new ShouldNotHappenException($frameworkName);
         }
 
         return $this->render('homepage/framework.twig', [
