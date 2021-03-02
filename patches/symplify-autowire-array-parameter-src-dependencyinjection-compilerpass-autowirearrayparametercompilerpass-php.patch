@@ -1,0 +1,14 @@
+--- /dev/null
++++ ../src/DependencyInjection/CompilerPass/AutowireArrayParameterCompilerPass.php
+@@ -123,6 +123,11 @@
+             return true;
+         }
+ 
++        // some weird bug in Symfony GitHub Actions
++        if ($definition->getClass() === 'App\Kernel') {
++            return true;
++        }
++
+         $reflectionClass = $containerBuilder->getReflectionClass($definition->getClass());
+         if (! $reflectionClass instanceof ReflectionClass) {
+             return true;

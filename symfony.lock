@@ -1,0 +1,8 @@
+{
+    "cweagans/composer-patches": {
+        "version": "1.7.0"
+    },
+    "symplify/vendor-patches": {
+        "version": "v9.2.4"
+    }
+}
