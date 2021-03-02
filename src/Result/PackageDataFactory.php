@@ -8,7 +8,6 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\PhpFwTrends\Exception\ShouldNotHappenException;
 use TomasVotruba\PhpFwTrends\Packagist\PackageMonthlyDownloadsProvider;
-use TomasVotruba\PhpFwTrends\Packagist\Purifier\PHPStanNettePackagesPurifier;
 use TomasVotruba\PhpFwTrends\Sorter;
 use TomasVotruba\PhpFwTrends\Statistics;
 use TomasVotruba\PhpFwTrends\ValueObject\Option;
@@ -18,7 +17,6 @@ final class PackageDataFactory
 {
     public function __construct(
         private PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
-        private PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier,
         private Statistics $statistics,
         private Sorter $sorter,
         private SymfonyStyle $symfonyStyle,
@@ -54,13 +52,6 @@ final class PackageDataFactory
                 // to prevent fatal errors
                 continue;
             }
-
-            $youngerChunk = $this->phpStanNettePackagesPurifier->correctLastYearDownloads($youngerChunk, $packageName);
-
-            $olderChunk = $this->phpStanNettePackagesPurifier->correctPreviousYearDownloads(
-                $olderChunk,
-                $packageName
-            );
 
             $lastYearTrend = 100 * ($youngerChunk / $olderChunk) - 100;
             if ($lastYearTrend > 300) {
