@@ -9,6 +9,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
+use Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPass;
 
 final class PhpFwTrendsKernel extends Kernel
 {
@@ -22,5 +23,10 @@ final class PhpFwTrendsKernel extends Kernel
     protected function configureRoutes(RoutingConfigurator $routingConfigurator): void
     {
         $routingConfigurator->import(__DIR__ . '/../../config/routes.php');
+    }
+
+    protected function build(ContainerBuilder $containerBuilder): void
+    {
+        $containerBuilder->addCompilerPass(new AutowireArrayParameterCompilerPass());
     }
 }
