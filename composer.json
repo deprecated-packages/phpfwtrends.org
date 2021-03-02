@@ -1,12 +1,5 @@
 {
     "name": "tomasvotruba/phpfwtrends-org",
-    "extra": {
-        "patches": {
-            "symplify/autowire-array-parameter": [
-                "patches/symplify-autowire-array-parameter-src-dependencyinjection-compilerpass-autowirearrayparametercompilerpass-php.patch"
-            ]
-        }
-    },
     "license": "MIT",
     "description": "Micro site with stats of PHP framework downloads - raw Packagist data over guessing and emotions",
     "require": {
@@ -70,6 +63,13 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "patches": {
+            "symplify/autowire-array-parameter": [
+                "patches/symplify-autowire-array-parameter-src-dependencyinjection-compilerpass-autowirearrayparametercompilerpass-php.patch"
+            ]
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
