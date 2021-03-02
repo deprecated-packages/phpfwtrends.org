@@ -47,7 +47,10 @@ final class FrameworkController extends AbstractController
     {
         $phpFrameworkTrends = $this->parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS)['vendors'];
         foreach ($phpFrameworkTrends as $frameworkTrend) {
-            if ($frameworkTrend['vendor_key'] === $frameworkName) {
+
+            /** @var VendorData $vendorData */
+            $vendorData = $this->arrayToValueObjectHydrator->hydrateArray($frameworkTrend, VendorData::class);
+            if ($vendorData->getVendorKey() === $frameworkName) {
                 return $frameworkTrend;
             }
         }
