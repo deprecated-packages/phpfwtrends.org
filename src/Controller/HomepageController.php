@@ -18,7 +18,7 @@ final class HomepageController extends AbstractController
     ) {
     }
 
-    #[Route(path: '/', name: RouteName::PHP_FRAMEWORK_TRENDS)]
+    #[Route(path: '/', name: RouteName::HOMEPAGE)]
     public function __invoke(): Response
     {
         $phpFrameworkTrends = $this->parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS);
