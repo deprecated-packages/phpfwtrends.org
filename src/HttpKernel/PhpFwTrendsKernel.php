@@ -17,15 +17,6 @@ final class PhpFwTrendsKernel extends Kernel
 {
     use MicroKernelTrait;
 
-    /**
-     * @return BundleInterface[]
-     */
-    public function registerBundles(): iterable
-    {
-        return [new SymplifyKernelBundle()];
-    }
-
-
     protected function configureContainer(ContainerBuilder $containerBuilder, LoaderInterface $loader): void
     {
         $loader->load(__DIR__ . '/../../config/config.php');
