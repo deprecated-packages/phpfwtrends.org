@@ -8,7 +8,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symplify\EasyHydrator\ArrayToValueObjectHydrator;
-use Symplify\EasyHydrator\EasyHydratorBundle;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\PhpFwTrends\Exception\ShouldNotHappenException;
 use TomasVotruba\PhpFwTrends\ValueObject\Option;

@@ -29,22 +29,22 @@
                 </tr>
             </thead>
 
-            {# @var framework \TomasVotruba\PhpFwTrends\ValueObject\VendorData #}
-            {% for framework in php_framework_trends.vendors %}
+            {# @var vendor_data \TomasVotruba\PhpFwTrends\ValueObject\VendorData #}
+            {% for vendor_data in vendor_datas %}
                 <tr>
                     <td>
-                        <a href="{{ path('framework', { frameworkName: framework.vendor_key }) }}">
-                            {{ framework.vendor_name }}
+                        <a href="{{ path('framework', { frameworkName: vendor_data.vendorKey }) }}">
+                            {{ vendor_data.vendorName }}
                         </a>
                     </td>
-                    <td class="text-right text-nowrap" data-order="{{ framework.last_year_trend }}">
-                        {{ macros.trend(framework.last_year_trend) }}
+                    <td class="text-right text-nowrap" data-order="{{ vendor_data.lastYearTrend }}">
+                        {{ macros.trend(vendor_data.lastYearTrend) }}
                     </td>
-                    <td class="text-right text-nowrap" data-order="{{ framework.vendor_total_last_year }}">
-                        {{ macros.number(framework.vendor_total_last_year) }}
+                    <td class="text-right text-nowrap" data-order="{{ vendor_data.vendorTotalLastYear }}">
+                        {{ macros.number(vendor_data.vendorTotalLastYear) }}
                     </td>
-                    <td class="text-right text-nowrap" data-order="{{ framework.vendor_total_previous_year }}">
-                        {{ macros.number(framework.vendor_total_previous_year) }}
+                    <td class="text-right text-nowrap" data-order="{{ vendor_data.vendorTotalPreviousYear }}">
+                        {{ macros.number(vendor_data.vendorTotalPreviousYear) }}
                     </td>
                 </tr>
             {% endfor %}
