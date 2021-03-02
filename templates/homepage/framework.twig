@@ -1,13 +1,8 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="container-fluid">
-        single framework
-
-
+    <div class="container-fluid" id="main_table">
         {% for framework in php_framework_trends.vendors %}
-            <hr>
-
             <div class="text-center mb-5">
                 <h2 id="{{ framework.vendor_name|webalize }}">{{ framework.vendor_name }}</h2>
 

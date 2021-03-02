@@ -33,7 +33,9 @@
             {% for framework in php_framework_trends.vendors %}
                 <tr>
                     <td>
-                        <a href="#{{ framework.vendor_name|webalize }}">{{ framework.vendor_name }}</a>
+                        <a href="{{ path('framework', { frameworkName: framework.vendor_name }) }}">
+                            {{ framework.vendor_name }}
+                        </a>
                     </td>
                     <td class="text-right text-nowrap" data-order="{{ framework.last_year_trend }}">
                         {{ macros.trend(framework.last_year_trend) }}
