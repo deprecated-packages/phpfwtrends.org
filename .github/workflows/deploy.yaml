@@ -22,7 +22,7 @@ jobs:
                     php-version: 8.0
 
             # composer install cache - https://github.com/ramsey/composer-install
-            -   uses: "ramsey/composer-install@v1"
+            -   run: composer install --dev
 
             # generate website to /output directory
             -   run: bin/console dump-static-site --ansi -vvv
