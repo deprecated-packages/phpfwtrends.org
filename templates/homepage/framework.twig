@@ -1,17 +1,19 @@
 {% extends "base.twig" %}
 
 {% block content %}
+    {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
+    {% import "_macros/trends_macros.twig" as macros %}
+
     <div class="container-fluid" id="main_table">
-        {% for framework in php_framework_trends.vendors %}
             <div class="text-center mb-5">
-                <h2 id="{{ framework.vendor_name|webalize }}">{{ framework.vendor_name }}</h2>
+                <h2 id="{{ framework_trend.vendor_name|webalize }}">{{ framework_trend.vendor_name }}</h2>
 
                 <p>
                     <a href="#main_table">Jump up ↑</a>
                 </p>
             </div>
 
-            <table class="table table-bordered table-responsive table-striped mt-4 mt-4 sortable_table" id="{{ framework.vendor_name|webalize }}">
+            <table class="table table-bordered table-responsive table-striped mt-4 mt-4 sortable_table" id="{{ framework_trend.vendor_name|webalize }}">
                 <thead class="thead-inverse">
                 <tr>
                     <th class="text-center w-25 align-middle">Package</th>
@@ -20,7 +22,7 @@
                     <th class="text-center w-25 align-middle">Previous {{ chunk_size_in_months }} Months</th>
                 </tr>
                 </thead>
-                {% for package in framework.packages_data %}
+                {% for package in framework_trend.packages_data %}
                     {# @var package \TomasVotruba\PhpFwTrends\ValueObject\PackageData #}
                     <tr>
                         <td>
@@ -34,7 +36,6 @@
                     </tr>
                 {% endfor %}
             </table>
-        {% endfor %}
     </div>
 
     {# sortable tables #}
