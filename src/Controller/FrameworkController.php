@@ -33,6 +33,10 @@ final class FrameworkController extends AbstractController
         ]);
     }
 
+    /**
+     * @todo hydrate to an objetc
+     * @return mixed[]
+     */
     private function matchFrameworkTrend(string $frameworkName): array
     {
         $phpFrameworkTrends = $this->parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS)['vendors'];
