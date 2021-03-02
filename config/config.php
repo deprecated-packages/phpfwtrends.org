@@ -20,7 +20,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire()
         ->autoconfigure();
 
-    $services->load('TomasVotruba\PhpFwTrends\\', __DIR__ . '/../src')
+    $services->load('TomasVotruba\\PhpFwTrends\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject']);
 
     $services->set(SymfonyStyleFactory::class);
