@@ -4,9 +4,7 @@
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\ErrorHandler\Debug;
-use Symfony\Component\HttpKernel\Kernel;
 use TomasVotruba\PhpFwTrends\HttpKernel\PhpFwTrendsKernel;
-use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 set_time_limit(0);
 
