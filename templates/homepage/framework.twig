@@ -1,41 +1,47 @@
 {% extends "base.twig" %}
+{% import "_macros/trends_macros.twig" as macros %}
 
 {% block content %}
     {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
-    {% import "_macros/trends_macros.twig" as macros %}
 
-    <div class="container-fluid" id="main_table">
-            <div class="text-center mb-5">
-                <h2 id="{{ framework_trend.vendorNameWebalized }}">{{ framework_trend.vendorName }}</h2>
-                <p>
-                    <a href="{{ path('homepage') }}">Back Home ↑</a>
-                </p>
-            </div>
+    <h1>
+        <span class="text-orange">{{ framework_trend.packagesData|length }}</span>
+        {{ framework_trend.vendorName }}
+        packages
+    </h1>
 
-            <table class="table table-bordered table-responsive table-striped mt-4 mt-4 sortable_table" id="{{ framework_trend.vendorNameWebalized }}">
-                <thead class="thead-inverse">
-                <tr>
-                    <th class="text-center w-25 align-middle">Package</th>
-                    <th class="text-center w-25 align-middle">Year Trend</th>
-                    <th class="text-center w-25 align-middle">Last {{ chunk_size_in_months }} Months</th>
-                    <th class="text-center w-25 align-middle">Previous {{ chunk_size_in_months }} Months</th>
-                </tr>
-                </thead>
-                {% for package in framework_trend.packagesData %}
-                    {# @var package \TomasVotruba\PhpFwTrends\ValueObject\PackageData #}
-                    <tr>
-                        <td>
-                            <a href="https://packagist.org/packages/{{ package.packageName }}/stats">
-                                {{ package.packageShortName }}
-                            </a>
-                        </td>
-                        <td class="text-right text-nowrap" data-order="{{ package.lastYearTrend }}">{{ macros.trend(package.lastYearTrend) }}</td>
-                        <td class="text-right text-nowrap" data-order="{{ package.youngerChunk }}">{{ macros.number(package.youngerChunk) }}</td>
-                        <td class="text-right text-nowrap" data-order="{{ package.olderChunk }}">{{ macros.number(package.olderChunk) }}</td>
-                    </tr>
-                {% endfor %}
-            </table>
+    <div class="text-center">
+        <p>
+            <a href="{{ path('homepage') }}">← Back to the table</a>
+        </p>
     </div>
+
+    <br>
+
+    <table class="table table-bordered table-responsive table-striped sortable_table" id="{{ framework_trend.vendorNameWebalized }}">
+        <thead class="thead-inverse">
+            <tr>
+                <th class="text-center w-25 align-middle">Package</th>
+                <th class="text-center w-25 align-middle">Year Trend</th>
+                <th class="text-center w-25 align-middle">Last {{ chunk_size_in_months }} Months</th>
+                <th class="text-center w-25 align-middle">Previous {{ chunk_size_in_months }} Months</th>
+            </tr>
+        </thead>
+
+        {% for package in framework_trend.packagesData %}
+            {# @var package \TomasVotruba\PhpFwTrends\ValueObject\PackageData #}
+            <tr>
+                <td>
+                    <a href="https://packagist.org/packages/{{ package.packageName }}/stats">
+                        {{ package.packageShortName }}
+                    </a>
+                </td>
+                <td class="text-right text-nowrap" data-order="{{ package.lastYearTrend }}">{{ macros.trend(package.lastYearTrend) }}</td>
+                <td class="text-right text-nowrap" data-order="{{ package.youngerChunk }}">{{ macros.number(package.youngerChunk) }}</td>
+                <td class="text-right text-nowrap" data-order="{{ package.olderChunk }}">{{ macros.number(package.olderChunk) }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 
     {# sortable tables #}
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>

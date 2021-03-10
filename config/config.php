@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
 use Symplify\SmartFileSystem\SmartFileSystem;
