@@ -1,26 +1,15 @@
-name: Monthly Pull Request
+name: Automated Updates
 
 on:
-    # to try it out
     schedule:
         # https://crontab.guru/every-7-days
         -   cron: "0 0 * * 0"
 
 jobs:
-    monthly_pull_request:
+    automated_updates:
         runs-on: ubuntu-latest
 
-        strategy:
-            fail-fast: false
-            matrix:
-                actions:
-                    -
-                        name: Re-Generate Framework Stats
-                        run: bin/console generate-stats --ansi
-                        # to prevent mutual override
-                        branch: re-generated-framework-stats
-
-        name: ${{ matrix.actions.name }}
+        name: "Regenerate Stats"
 
         steps:
             -   uses: actions/checkout@v2
@@ -30,17 +19,12 @@ jobs:
             -   uses: shivammathur/setup-php@v2
                 with:
                     php-version: 8.0
-                    tools: composer:v2
 
-            # composer install cache - https://github.com/ramsey/composer-install
             -   uses: "ramsey/composer-install@v1"
 
-            -   run: ${{ matrix.actions.run }}
+            -   run: bin/console generate-stats --ansi
                 env:
                      GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-            # fix coding standards
-            -   run: 'composer fix-cs --ansi'
 
             # see https://github.com/peter-evans/create-pull-request
             -
@@ -48,8 +32,8 @@ jobs:
                 uses: peter-evans/create-pull-request@v3
                 with:
                     token: ${{ secrets.GITHUB_TOKEN }}
-                    title: "${{ matrix.actions.name }}"
-                    commit-message: "${{ matrix.actions.name }}"
+                    title: "Regenerate Stats"
+                    commit-message: "Regenerate Stats"
                     base: "main"
                     delete-branch: true
                     author: "kaizen-ci <info@kaizen-ci.org>"
