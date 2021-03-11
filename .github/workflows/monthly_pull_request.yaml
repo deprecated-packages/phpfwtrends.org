@@ -3,8 +3,8 @@ name: Monthly Pull Request
 on:
     # to try it out
     schedule:
-        # every 1st day in month at 12:00 https://crontab.guru/#00_12_1_*_*
-        -   cron: "00 12 1 * *"
+        # https://crontab.guru/every-7-days
+        -   cron: "0 0 * * 0"
 
 jobs:
     monthly_pull_request:
