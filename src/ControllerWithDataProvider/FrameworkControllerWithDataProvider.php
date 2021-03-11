@@ -27,11 +27,7 @@ final class FrameworkControllerWithDataProvider implements ControllerWithDataPro
     }
 
     /**
-<<<<<<< HEAD
      * @return int[]|string[]
-=======
-     * @return string[]
->>>>>>> ec9b904... misc
      */
     public function getArguments(): array
     {
