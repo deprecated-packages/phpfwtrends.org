@@ -60,6 +60,7 @@ final class VendorDataFactory
         $lastYearTrend = round($lastYearTrend, 0);
 
         return new VendorData(
+            $vendorName,
             $frameworkName,
             $vendorTotalLastYear,
             $vendorTotalPreviousYear,

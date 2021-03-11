@@ -13,6 +13,7 @@ final class VendorData implements LastYearTrendAwareInterface
      * @param PackageData[] $packagesData
      */
     public function __construct(
+        private string $vendorKey,
         private string $vendorName,
         private int $vendorTotalLastYear,
         private int $vendorTotalPreviousYear,
@@ -32,6 +33,7 @@ final class VendorData implements LastYearTrendAwareInterface
         }
 
         return [
+            'vendor_key' => $this->vendorKey,
             'vendor_name' => $this->vendorName,
             'vendor_total_last_year' => $this->vendorTotalLastYear,
             'vendor_total_previous_year' => $this->vendorTotalPreviousYear,
