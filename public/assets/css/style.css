@@ -8,13 +8,7 @@ body {
     line-height: 1.5em;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/*!* Typography *!*/
-h1, h2, h3, .headline {
+h1, h2, .headline {
     font-weight: bolder;
 
     font-family: sofia-pro,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
@@ -22,25 +16,14 @@ h1, h2, h3, .headline {
 
 h1 {
     font-size: 4.3em;
-}
-
-h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus {
-    text-decoration: none;
+    margin: .9em 0 .6em 0;
+    text-align: center;
 }
 
 h2 {
     font-size: 1.9em;
+    line-height: 1.3em;
     margin: 1.7em 0 .4em;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin: 1.2em 0 .4em;
-}
-
-h1 {
-    margin: .9em 0 .6em 0;
-    text-align: center;
 }
 
 .headline {
@@ -49,38 +32,13 @@ h1 {
     font-weight: 400;
 }
 
-h2 {
-    line-height: 1.3em;
-}
-
 a:focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
 
-hr {
-    margin: 1.2em 0;
-    border: 0;
-    border-top: 1px solid #eeeeee;
-}
-
 p {
     margin-bottom: 1em;
-}
-
-ul {
-    margin-top: 0;
-    margin-bottom: .5em;
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 100%;
-    }
-
-    .container-fluid {
-        max-width: 100%;
-    }
 }
 
 .container {
@@ -109,9 +67,17 @@ ul {
     h1 {
         font-size: 3.2em;
     }
+
+    h2 {
+        font-size: 1.7em;
+    }
 }
 
 @media (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+
     .container {
         max-width: 45em;
     }
@@ -143,7 +109,7 @@ a:hover, a:focus {
 }
 
 #footer {
-    background: #24292e;
+    background: rgba(39,58,75,.97);
     color: hsla(0,0%,100%,.75);
     padding-top: 1.5em;
     padding-bottom: 1em;
@@ -161,7 +127,7 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-th.align-middle {
+.th-title {
     text-transform: uppercase;
     font-weight: 400;
 }
