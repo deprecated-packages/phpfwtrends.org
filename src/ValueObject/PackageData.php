@@ -33,7 +33,7 @@ final class PackageData implements LastYearTrendAwareInterface
     /**
      * @return array<string, mixed>
      */
-    public function __toArray(): array
+    public function toArray(): array
     {
         return [
             'package_name' => $this->packageName,

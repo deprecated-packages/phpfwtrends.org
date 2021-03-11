@@ -31,9 +31,8 @@ final class HomepageController extends AbstractController
             $vendorDatas[] = $this->arrayToValueObjectHydrator->hydrateArray($phpFrameworkTrend, VendorData::class);
         }
 
-        return $this->render('homepage/index.twig', [
+        return $this->render('homepage/homepage.twig', [
             'title' => 'PHP Framework Trends',
-            'promo_post_url' => 'https://tomasvotruba.com/blog/2019/04/11/trends-of-php-frameworks-in-numbers/',
             'vendor_datas' => $vendorDatas,
         ]);
     }

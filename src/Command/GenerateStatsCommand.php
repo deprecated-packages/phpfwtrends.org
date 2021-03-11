@@ -41,7 +41,7 @@ final class GenerateStatsCommand extends Command
         $vendorsData = $this->vendorDataFactory->createVendorsData($frameworksVendorToName);
 
         foreach ($vendorsData[self::VENDORS] as $key => $vendorData) {
-            $vendorsData[self::VENDORS][$key] = $vendorData->__toArray();
+            $vendorsData[self::VENDORS][$key] = $vendorData->toArray();
         }
 
         $fileInfo = $this->parametersConfigDumper->dumpPhp(Option::PHP_FRAMEWORK_TRENDS, $vendorsData);

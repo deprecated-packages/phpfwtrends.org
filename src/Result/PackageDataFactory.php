@@ -54,12 +54,6 @@ final class PackageDataFactory
             }
 
             $lastYearTrend = 100 * ($youngerChunk / $olderChunk) - 100;
-            if ($lastYearTrend > 300) {
-                // too huge trend
-                continue;
-            }
-
-            $lastYearTrend = round($lastYearTrend, 1);
 
             $packagesData[] = new PackageData(
                 $packageName,

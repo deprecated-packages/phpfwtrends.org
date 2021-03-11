@@ -5,18 +5,23 @@
     {% import "_macros/trends_macros.twig" as macros %}
 
     <div class="container-fluid">
-        <h1>{{ title }}</h1>
+        <h1>
+            <strong>
+                PHP Framework <span class="text-orange">Trends</span>
+            </strong>
+        </h1>
 
-        <p>
-            What are <strong>yearly downloads of popular PHP frameworks</strong> from Packagist?
-            Is it marketing fake news or is it true?
-        </p>
+        <div class="text-center">
+            <p class="headline">
+                How much is marketing and how much developers?<br>
+                What are <strong>real downloads</strong> of PHP frameworks from Packagist?
+                <br>
+            </p>
+        </div>
 
-        <p>
-            Why was this table created? - toto new page?
-        <p>
+        <br>
 
-        <table class="table table-bordered table-responsive table-striped sortable_table" id="main_table">
+        <table class="table table-bordered table-responsive table-striped sortable_table border">
             <thead class="thead-inverse">
                 <tr>
                     <th class="text-center w-25 align-middle">Framework</th>

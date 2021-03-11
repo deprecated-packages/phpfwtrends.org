@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\PhpFwTrends\ValueObject;
 
-use Nette\Utils\Strings;
 use TomasVotruba\PhpFwTrends\Contract\LastYearTrendAwareInterface;
 
 final class VendorData implements LastYearTrendAwareInterface
@@ -13,6 +12,7 @@ final class VendorData implements LastYearTrendAwareInterface
      * @param PackageData[] $packagesData
      */
     public function __construct(
+        private string $vendorKey,
         private string $vendorName,
         private int $vendorTotalLastYear,
         private int $vendorTotalPreviousYear,
@@ -24,14 +24,15 @@ final class VendorData implements LastYearTrendAwareInterface
     /**
      * @return array<string, mixed>
      */
-    public function __toArray(): array
+    public function toArray(): array
     {
         $packagesDataAsArray = [];
         foreach ($this->packagesData as $packageData) {
-            $packagesDataAsArray[] = $packageData->__toArray();
+            $packagesDataAsArray[] = $packageData->toArray();
         }
 
         return [
+            'vendor_key' => $this->vendorKey,
             'vendor_name' => $this->vendorName,
             'vendor_total_last_year' => $this->vendorTotalLastYear,
             'vendor_total_previous_year' => $this->vendorTotalPreviousYear,
@@ -42,12 +43,7 @@ final class VendorData implements LastYearTrendAwareInterface
 
     public function getVendorKey(): string
     {
-        return Strings::webalize($this->vendorName);
-    }
-
-    public function getVendorNameWebalized(): string
-    {
-        return Strings::webalize($this->vendorName);
+        return $this->vendorKey;
     }
 
     public function getVendorName(): string
