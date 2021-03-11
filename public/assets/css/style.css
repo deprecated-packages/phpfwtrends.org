@@ -95,6 +95,10 @@ ul {
     h1 {
         font-size: 4.5em;
     }
+
+    .headline {
+        font-size: 1.3em;
+    }
 }
 
 @media (max-width: 900px) {
@@ -103,7 +107,21 @@ ul {
     }
 
     h1 {
-        font-size: 3.5em;
+        font-size: 3.2em;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 45em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .headline {
+        font-size: 1.1em;
     }
 }
 
@@ -129,7 +147,7 @@ a:hover, a:focus {
     color: hsla(0,0%,100%,.75);
     padding-top: 1.5em;
     padding-bottom: 1em;
-    line-height: 3em;
+    line-height: 2em;
     margin-top: 10em;
 }
 
