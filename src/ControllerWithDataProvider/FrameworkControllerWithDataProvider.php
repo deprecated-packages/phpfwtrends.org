@@ -11,8 +11,9 @@ use TomasVotruba\PhpFwTrends\ValueObject\Option;
 
 final class FrameworkControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
-    public function __construct(private ParameterProvider $parameterProvider)
-    {
+    public function __construct(
+        private ParameterProvider $parameterProvider
+    ) {
     }
 
     public function getControllerClass(): string
@@ -26,7 +27,11 @@ final class FrameworkControllerWithDataProvider implements ControllerWithDataPro
     }
 
     /**
+<<<<<<< HEAD
      * @return int[]|string[]
+=======
+     * @return string[]
+>>>>>>> ec9b904... misc
      */
     public function getArguments(): array
     {
