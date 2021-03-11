@@ -16,37 +16,35 @@
 </head>
 
     <body>
-        <div id="content">
-                <div class="container-fluid">
-        <h1>How is it Measured?</h1>
+        <div id="content" class="container">
+                <h1>
+        How is it <span class="text-orange">Measured?</span>
+    </h1>
 
-        <h2>Does Laravel downloads add to Symfony?</h2>
+    <h2>Does Laravel downloads boost Symfony?</h2>
 
-        <code>Symfony</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/88cd6f3c8ae14ec9770f38bfea6300f88089def7/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
-        </div>
+    <p>Many Laravel packages are using Symfony packages as base structure. It would not be fair for Laravel to add these downloads to Symfony, as Laravel users don't use Symfony directly. To avoid this false positive, Laravel downloads are removed from Symfony total downloads.</p>
 
-        <h2 class="mb-4" id="methodology">Methodology Notes</h2>
+    <p>
+        <strong>1 download of Laravel package = 0 download of Symfony packages</strong>. See <a href="https://github.com/TomasVotruba/phpfwtrends.org/blob/main/src/Packagist/Purifier/InterveningPackagesPurifier.php">list of packages cleared this way</a>.
+    </p>
 
-        <ul>
-            <li><code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads = when you download Laravel package, it will not count into Symfony download; see <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/b8d21d722639a7f299689b501835d2036582c71c/packages/FrameworkStats/src/Packagist/Purifier/InterveningPackagesPurifier.php#L19">full list of cleared packages</a></li>
+    <h2>What Packages are Excluded?</h2>
 
-        </ul>
+    <ul>
+        <li>
+            packages with <strong>< 500 downloads daily</strong> - not relevant in this scale
+        </li>
+        <li>
+            packages with <strong>younger < 12 months</strong>, so we're able to compute trend
+        </li>
+        <li>
+            sandbox packages or meta packages that have nothing to do with framework usage, e.g. <strong>symfony/demo</strong> - <a href="https://github.com/TomasVotruba/phpfwtrends.org/blob/b772fb7dc94dc648c7a7943ebe7e69896649887f/config/parameters.php#L28-L76">see list of these packages</a>
+        </li>
+    </ul>
 
-        @todo use global variables!
-
-            <li>
-                packages with <strong>less than 500 downloads daily</strong> - not relevant in this scale
-            </li>
-            <li>
-                packages with <strong>history shorter than 12__TODO__ months</strong> - we need 12 months to compute stable trend
-            </li>
-            <li>
-                packages with <strong>year trend bigger than 300 %</strong> - they're probably caused by new interdependency from same framework's package
-            </li>
-        </ul>
-    </div>
-
-        <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    <h2>How is this page Generated?</h2>
+    <p>This website is generated with GitHub Actions once a weeks.</p>
         </div>
 
         <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
@@ -82,16 +80,33 @@
     });
 </script>
 
-<div class="text-center mt-5" id="footer">
+<div class="text-center" id="footer">
     <p class="mt-2">
-        Last update
+        <a href="/">The Table</a>
 
-        Brought by...
+        <span class="pl-2 pr-2 text-orange">•</span>
 
-        <a href="/how-is-it-measured">How is it Measured?</a>
+        <a href="/how-is-it-measured">How is it measured?</a>
 
+        <span class="pl-2 pr-2 text-orange">•</span>
 
-            </p>
+        <a href="https://tomasvotruba.com/blog/2019/04/11/trends-of-php-frameworks-in-numbers">
+            Why data beats emotions?
+        </a>
+
+        <span class="pl-2 pr-2 text-orange">•</span>
+
+        Last update 2021-03-11 01:10
+
+        <br>
+        <br>
+
+        Build by <a href="https://tomasvotruba.com/">Tomas Votruba</a> with hands and computer
+
+        <span class="pl-2 pr-2 text-orange">•</span>
+
+        <a href="https://github.com/sponsors/TomasVotruba">Sponsor his hands</a>
+    </p>
 </div>
     </body>
 </html>
