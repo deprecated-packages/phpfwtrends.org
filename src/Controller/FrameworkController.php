@@ -33,8 +33,10 @@ final class FrameworkController extends AbstractController
         /** @var VendorData $vendorData */
         $vendorData = $this->arrayToValueObjectHydrator->hydrateArray($frameworkTrend, VendorData::class);
 
+        $titleFrameworkName = ucfirst($frameworkName);
+
         return $this->render('homepage/framework.twig', [
-            'title' => 'PHP Framework Trends',
+            'title' => $titleFrameworkName . ' Framework Trends',
             'framework_trend' => $vendorData,
         ]);
     }
