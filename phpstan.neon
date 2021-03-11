@@ -16,9 +16,6 @@ services:
                     provideIntParameter: [0]
 
 parameters:
-    bootstrapFiles:
-        - vendor/rector/rector-prefixed/vendor/autoload.php
-
     paths:
         - bin
         - src
@@ -30,6 +27,7 @@ parameters:
         - rector.php
 
     level: max
+    reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:
         # generated file
@@ -47,3 +45,6 @@ parameters:
             paths:
                 - src/ValueObject
                 - src/Result/VendorDataFactory.php
+
+        - '#Function "method_exists\(\)" cannot be used/left in the code#'
+        - '#Method call on new expression is not allowed#'

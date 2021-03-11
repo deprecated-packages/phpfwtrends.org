@@ -9,5 +9,4 @@ namespace TomasVotruba\PhpFwTrends;
 // fake kernel, to make CI random fail pass, see https://github.com/TomasVotruba/phpfwtrends.org/runs/2012166446
 final class Kernel
 {
-
 }

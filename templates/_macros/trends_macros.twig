@@ -12,11 +12,11 @@
 
 {% macro number(value, bold_breakpoint = 10000000, muted_breakpoint = 1000000) %}
     {% if value > bold_breakpoint %}
-        <strong>{{ value|millions }}</strong>
+        <strong>{{ value|thousands }}</strong>
     {% elseif value < muted_breakpoint %}
-        <span class="text-muted">{{ value|millions }}</span>
+        <span class="text-muted">{{ value|thousands }}</span>
     {% else %}
-        {{ value|millions }}
+        {{ value|thousands }}
     {% endif %}
 {% endmacro %}
 
