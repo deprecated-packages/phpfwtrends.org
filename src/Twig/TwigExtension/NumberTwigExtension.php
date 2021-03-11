@@ -15,7 +15,9 @@ final class NumberTwigExtension extends AbstractExtension
     public function getFilters(): array
     {
         $twigFilters = [];
-        $twigFilters[] = new TwigFilter('thousands', fn(int $number): string => $this->formatNumber($number / (10 ** 3)) . ' K');
+        $twigFilters[] = new TwigFilter('thousands', fn (int $number): string => $this->formatNumber(
+            $number / (10 ** 3)
+        ) . ' K');
 
         return $twigFilters;
     }
