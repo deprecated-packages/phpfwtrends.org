@@ -73,5 +73,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'nette/addon-installer',
         'nette/type-fixer',
         'nette/web-project',
+        // laminas
+        'laminas/laminas-zendframework-bridge',
     ]);
 };
