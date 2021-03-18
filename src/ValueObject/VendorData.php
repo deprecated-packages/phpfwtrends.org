@@ -8,6 +8,8 @@ use TomasVotruba\PhpFwTrends\Contract\LastYearTrendAwareInterface;
 
 final class VendorData implements LastYearTrendAwareInterface
 {
+    private float $lastYearTrend;
+
     /**
      * @param PackageData[] $packagesData
      */
@@ -16,9 +18,11 @@ final class VendorData implements LastYearTrendAwareInterface
         private string $vendorName,
         private int $vendorTotalLastYear,
         private int $vendorTotalPreviousYear,
-        private float $lastYearTrend,
         private array $packagesData
     ) {
+        $lastYearTrend = ($vendorTotalLastYear / $vendorTotalPreviousYear * 100) - 100;
+        $lastYearTrend = round($lastYearTrend, 0);
+        $this->lastYearTrend = $lastYearTrend;
     }
 
     /**
