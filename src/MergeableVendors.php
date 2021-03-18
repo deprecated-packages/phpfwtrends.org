@@ -11,7 +11,7 @@ use Webmozart\Assert\Assert;
 
 final class MergeableVendors
 {
-    /** string[] */
+    /** @var array<string, string[]> */
     private array $mergeableVendors;
 
     public function __construct(ParameterProvider $parameterProvider)
@@ -27,7 +27,7 @@ final class MergeableVendors
         $this->mergeableVendors = $mergeableVendors;
     }
 
-    public function vendorIsMergable(string $vendor): bool
+    public function isVendorMergable(string $vendor): bool
     {
         if (array_key_exists($vendor, $this->mergeableVendors)) {
             return false;
@@ -51,7 +51,7 @@ final class MergeableVendors
         }
 
         throw new ShouldNotHappenException(sprintf(
-            'Method vendorIsMergeable MUST be called before %s',
+            'Method vendorIsMergeable MUST be called before "%s"',
             __METHOD__
         ));
     }

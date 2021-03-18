@@ -48,3 +48,7 @@ parameters:
 
         - '#Function "method_exists\(\)" cannot be used/left in the code#'
         - '#Method call on new expression is not allowed#'
+        -
+            message: '#Use another value object over array with string-keys and objects, array<string, ValueObject>#'
+            paths:
+                - src/Merger.php
