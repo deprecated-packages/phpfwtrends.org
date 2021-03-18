@@ -12,7 +12,7 @@ use Webmozart\Assert\Assert;
 final class MergeableVendors
 {
     /** @var array<string, string[]> */
-    private array $mergeableVendors;
+    private array $mergeableVendors = [];
 
     public function __construct(ParameterProvider $parameterProvider)
     {
