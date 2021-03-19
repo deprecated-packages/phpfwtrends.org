@@ -32,6 +32,28 @@ final class FrameworkControllerWithDataProvider implements ControllerWithDataPro
     public function getArguments(): array
     {
         $frameworksVendorToName = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
+        $mergeableVendorList    = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_MERGEABLE_VENDORS);
+        $excludableVendors      = array_reduce($mergeableVendorList, function (array $excludableVendors, array $currentList) : array {
+            return $this->reduceExcludableVendors($excludableVendors, $currentList);
+        }, []);
+
+        foreach ($excludableVendors as $vendorName) {
+            if (isset($frameworksVendorToName[$vendorName])) {
+                unset($frameworksVendorToName[$vendorName]);
+            }
+        }
+
         return array_keys($frameworksVendorToName);
+    }
+
+    /**
+     * @param string[] $excludableVendors
+     * @param string[] $currentList
+     * @return string[]
+     */
+    private function reduceExcludableVendors(array $excludableVendors, array $currentList): array
+    {
+        $excludableVendors = array_merge($excludableVendors, $currentList);
+        return array_unique($excludableVendors);
     }
 }
