@@ -40,9 +40,7 @@ final class VendorDataFactory
             $this->symfonyStyle->newLine(2);
         }
 
-        $vendorsData = $this->sorter->sortArrayByLastYearTrend(
-            $this->merger->merge($vendorsData)
-        );
+        $vendorsData = $this->sorter->sortArrayByLastYearTrend($this->merger->merge($vendorsData));
 
         // metadata
         $nowDateTime = DateTime::from('now');

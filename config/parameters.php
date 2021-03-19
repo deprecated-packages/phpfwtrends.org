@@ -86,12 +86,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     ]);
 
     $parameters->set(Option::FRAMEWORKS_MERGEABLE_VENDORS, [
-        'laminas' => [
-            'laminas-api-tools',
-            'mezzio',
-        ],
-        'zendframework' => [
-            'zfcampus',
-        ],
+        'laminas' => ['laminas-api-tools', 'mezzio'],
+        'zendframework' => ['zfcampus'],
     ]);
 };

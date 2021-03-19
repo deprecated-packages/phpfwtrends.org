@@ -11,14 +11,14 @@ use Webmozart\Assert\Assert;
 
 final class MergeableVendors
 {
-    /** @var array<string, string[]> */
+    /**
+     * @var array<string, string[]>
+     */
     private array $mergeableVendors = [];
 
     public function __construct(ParameterProvider $parameterProvider)
     {
-        $mergeableVendors = $parameterProvider->provideArrayParameter(
-            Option::FRAMEWORKS_MERGEABLE_VENDORS
-        );
+        $mergeableVendors = $parameterProvider->provideArrayParameter(Option::FRAMEWORKS_MERGEABLE_VENDORS);
         Assert::isMap($mergeableVendors);
         foreach ($mergeableVendors as $vendor => $aliases) {
             Assert::isArray($aliases);
