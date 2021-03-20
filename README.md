@@ -17,7 +17,7 @@ bin/console generate-stats
 
 ```bash
 cd path/to/clone
-php -S 0.0.0.0:8080 -t public
+php -S 0.0.0.0:8001 -t public
 ```
 
 Open [0.0.0.0:8001](http://0.0.0.0:8001) in your browser to see the website
