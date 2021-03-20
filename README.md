@@ -3,25 +3,26 @@
 ## Install
 
 ```bash
-git clone ...
+git clone https://github.com/TomasVotruba/phpfwtrends.org
 composer install
 ```
 
-## Generate Stats
+## Generate stats
 
 ```bash
 bin/console generate-stats
 ```
 
-## Run Website Locally
+## Run website locally
 
 ```bash
-php -S localhost:8001 -t public 
+cd path/to/clone
+php -S 0.0.0.0:8080 -t public
 ```
 
-Open [localhost:8001](http://localhost:8001) in your browser to see the website
+Open [0.0.0.0:8001](http://0.0.0.0:8001) in your browser to see the website
 
-## Create Static Website to Deploy
+## Create static website to deploy
 
 ```bash
 bin/console dump-static-site 
