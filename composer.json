@@ -29,9 +29,9 @@
         "twig/twig": "^3.3"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12.81",
+        "phpstan/phpstan": "^0.12.82",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.9",
+        "rector/rector": "^0.10",
         "symplify/coding-standard": "^9.2",
         "symplify/easy-coding-standard": "^9.2",
         "symplify/phpstan-extensions": "^9.2",
