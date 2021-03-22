@@ -16,7 +16,7 @@ bin/console generate-stats
 ## Run website locally
 
 ```bash
-cd path/to/clone
+cd path/to/clone/directory
 php -S 0.0.0.0:8001 -t public public/index.php
 ```
 
