@@ -33,13 +33,18 @@ final class FrameworkControllerWithDataProvider implements ControllerWithDataPro
     {
         $frameworksVendorToName = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
         $mergeableVendorList    = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_MERGEABLE_VENDORS);
-        $excludableVendors      = array_reduce($mergeableVendorList, function (array $excludableVendors, array $currentList) : array {
-            return $this->reduceExcludableVendors($excludableVendors, $currentList);
-        }, []);
+        $excludableVendors      = array_reduce(
+            $mergeableVendorList,
+            fn (array $excludableVendors, array $currentList): array => $this->reduceExcludableVendors(
+                $excludableVendors,
+                $currentList
+            ),
+            []
+        );
 
-        foreach ($excludableVendors as $vendorName) {
-            if (isset($frameworksVendorToName[$vendorName])) {
-                unset($frameworksVendorToName[$vendorName]);
+        foreach ($excludableVendors as $excludableVendor) {
+            if (isset($frameworksVendorToName[$excludableVendor])) {
+                unset($frameworksVendorToName[$excludableVendor]);
             }
         }
 

@@ -33,8 +33,8 @@ final class MergeableVendors
             return false;
         }
 
-        foreach ($this->mergeableVendors as $vendorList) {
-            if (in_array($vendor, $vendorList, true)) {
+        foreach ($this->mergeableVendors as $mergeableVendor) {
+            if (in_array($vendor, $mergeableVendor, true)) {
                 return true;
             }
         }

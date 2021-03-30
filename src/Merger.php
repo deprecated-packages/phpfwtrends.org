@@ -48,14 +48,14 @@ final class Merger
 
             Assert::isInstanceOf($fullVendorData, VendorData::class);
 
-            foreach ($vendorsToMerge as $vendorData) {
+            foreach ($vendorsToMerge as $vendorToMerge) {
                 /** @var VendorData $fullVendorData */
                 $fullVendorData = new VendorData(
                     $fullVendorData->getVendorKey(),
                     $fullVendorData->getVendorName(),
-                    $fullVendorData->getVendorTotalLastYear() + $vendorData->getVendorTotalLastYear(),
-                    $fullVendorData->getVendorTotalPreviousYear() + $vendorData->getVendorTotalPreviousYear(),
-                    array_merge($fullVendorData->getPackagesData(), $vendorData->getPackagesData()),
+                    $fullVendorData->getVendorTotalLastYear() + $vendorToMerge->getVendorTotalLastYear(),
+                    $fullVendorData->getVendorTotalPreviousYear() + $vendorToMerge->getVendorTotalPreviousYear(),
+                    array_merge($fullVendorData->getPackagesData(), $vendorToMerge->getPackagesData()),
                 );
             }
 
