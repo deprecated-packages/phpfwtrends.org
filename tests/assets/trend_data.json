@@ -1,0 +1,2004 @@
+[
+    {
+        "vendor_key": "laminas",
+        "vendor_name": "Laminas",
+        "vendor_total_last_year": 78058161,
+        "vendor_total_previous_year": 38650205,
+        "packages_data": [
+            {
+                "package_name": "laminas/laminas-text",
+                "younger_chunk": 1289706,
+                "older_chunk": 521294,
+                "last_year_trend": 147.4047274666503
+            },
+            {
+                "package_name": "laminas/laminas-feed",
+                "younger_chunk": 3292750,
+                "older_chunk": 1410818,
+                "last_year_trend": 133.3929677676355
+            },
+            {
+                "package_name": "laminas/laminas-di",
+                "younger_chunk": 965547,
+                "older_chunk": 424846,
+                "last_year_trend": 127.26988132170246
+            },
+            {
+                "package_name": "laminas/laminas-captcha",
+                "younger_chunk": 967596,
+                "older_chunk": 428607,
+                "last_year_trend": 125.75366244601699
+            },
+            {
+                "package_name": "laminas/laminas-escaper",
+                "younger_chunk": 4234599,
+                "older_chunk": 1900073,
+                "last_year_trend": 122.86506886840664
+            },
+            {
+                "package_name": "laminas/laminas-server",
+                "younger_chunk": 1156340,
+                "older_chunk": 519197,
+                "last_year_trend": 122.71700337251565
+            },
+            {
+                "package_name": "laminas/laminas-psr7bridge",
+                "younger_chunk": 1025895,
+                "older_chunk": 461636,
+                "last_year_trend": 122.23028533303295
+            },
+            {
+                "package_name": "laminas/laminas-log",
+                "younger_chunk": 1129936,
+                "older_chunk": 511939,
+                "last_year_trend": 120.71692135195792
+            },
+            {
+                "package_name": "laminas/laminas-soap",
+                "younger_chunk": 1086946,
+                "older_chunk": 494426,
+                "last_year_trend": 119.83997605303927
+            },
+            {
+                "package_name": "laminas/laminas-session",
+                "younger_chunk": 1139758,
+                "older_chunk": 525146,
+                "last_year_trend": 117.03640511400639
+            },
+            {
+                "package_name": "laminas/laminas-modulemanager",
+                "younger_chunk": 1218729,
+                "older_chunk": 566228,
+                "last_year_trend": 115.23644185734366
+            },
+            {
+                "package_name": "laminas/laminas-serializer",
+                "younger_chunk": 1097069,
+                "older_chunk": 510393,
+                "last_year_trend": 114.94593381962525
+            },
+            {
+                "package_name": "laminas/laminas-config",
+                "younger_chunk": 1286092,
+                "older_chunk": 599087,
+                "last_year_trend": 114.67533096194708
+            },
+            {
+                "package_name": "laminas/laminas-crypt",
+                "younger_chunk": 1127206,
+                "older_chunk": 525489,
+                "last_year_trend": 114.50610764449874
+            },
+            {
+                "package_name": "laminas/laminas-stdlib",
+                "younger_chunk": 4641586,
+                "older_chunk": 2167004,
+                "last_year_trend": 114.19369784273584
+            },
+            {
+                "package_name": "laminas/laminas-uri",
+                "younger_chunk": 1586573,
+                "older_chunk": 741360,
+                "last_year_trend": 114.00844394086542
+            },
+            {
+                "package_name": "laminas/laminas-mail",
+                "younger_chunk": 1286680,
+                "older_chunk": 602250,
+                "last_year_trend": 113.64549605645499
+            },
+            {
+                "package_name": "laminas/laminas-view",
+                "younger_chunk": 1247373,
+                "older_chunk": 586722,
+                "last_year_trend": 112.60034564921719
+            },
+            {
+                "package_name": "laminas/laminas-math",
+                "younger_chunk": 1202555,
+                "older_chunk": 566796,
+                "last_year_trend": 112.16716420017079
+            },
+            {
+                "package_name": "laminas/laminas-console",
+                "younger_chunk": 1138268,
+                "older_chunk": 536945,
+                "last_year_trend": 111.98968236970268
+            },
+            {
+                "package_name": "laminas/laminas-db",
+                "younger_chunk": 1177081,
+                "older_chunk": 560648,
+                "last_year_trend": 109.95009346327822
+            },
+            {
+                "package_name": "laminas/laminas-mvc",
+                "younger_chunk": 1197352,
+                "older_chunk": 570798,
+                "last_year_trend": 109.76807907525955
+            },
+            {
+                "package_name": "laminas/laminas-i18n",
+                "younger_chunk": 1267024,
+                "older_chunk": 606656,
+                "last_year_trend": 108.85378204451945
+            },
+            {
+                "package_name": "laminas/laminas-mime",
+                "younger_chunk": 1347896,
+                "older_chunk": 645535,
+                "last_year_trend": 108.80293090227485
+            },
+            {
+                "package_name": "laminas/laminas-hydrator",
+                "younger_chunk": 1318175,
+                "older_chunk": 634311,
+                "last_year_trend": 107.81209848165963
+            },
+            {
+                "package_name": "laminas/laminas-http",
+                "younger_chunk": 1424060,
+                "older_chunk": 688061,
+                "last_year_trend": 106.96711483429522
+            },
+            {
+                "package_name": "laminas/laminas-code",
+                "younger_chunk": 7234549,
+                "older_chunk": 3496260,
+                "last_year_trend": 106.92251148369971
+            },
+            {
+                "package_name": "laminas/laminas-loader",
+                "younger_chunk": 1477005,
+                "older_chunk": 725582,
+                "last_year_trend": 103.56141690394747
+            },
+            {
+                "package_name": "laminas/laminas-form",
+                "younger_chunk": 1179618,
+                "older_chunk": 580394,
+                "last_year_trend": 103.24434780511172
+            },
+            {
+                "package_name": "laminas/laminas-eventmanager",
+                "younger_chunk": 7429254,
+                "older_chunk": 3690941,
+                "last_year_trend": 101.28346673653144
+            },
+            {
+                "package_name": "laminas/laminas-dependency-plugin",
+                "younger_chunk": 1114337,
+                "older_chunk": 556921,
+                "last_year_trend": 100.08888154693395
+            },
+            {
+                "package_name": "laminas/laminas-servicemanager",
+                "younger_chunk": 1909402,
+                "older_chunk": 954809,
+                "last_year_trend": 99.97737767448777
+            },
+            {
+                "package_name": "laminas/laminas-json",
+                "younger_chunk": 1344830,
+                "older_chunk": 676367,
+                "last_year_trend": 98.83140366103018
+            },
+            {
+                "package_name": "laminas/laminas-barcode",
+                "younger_chunk": 164322,
+                "older_chunk": 85569,
+                "last_year_trend": 92.03449847491498
+            },
+            {
+                "package_name": "laminas/laminas-validator",
+                "younger_chunk": 1860686,
+                "older_chunk": 1000810,
+                "last_year_trend": 85.91800641480401
+            },
+            {
+                "package_name": "laminas/laminas-diactoros",
+                "younger_chunk": 6331813,
+                "older_chunk": 3432736,
+                "last_year_trend": 84.4538292487392
+            },
+            {
+                "package_name": "laminas/laminas-filter",
+                "younger_chunk": 1454646,
+                "older_chunk": 797505,
+                "last_year_trend": 82.39960877988227
+            },
+            {
+                "package_name": "laminas/laminas-inputfilter",
+                "younger_chunk": 1310695,
+                "older_chunk": 721884,
+                "last_year_trend": 81.56587484969884
+            },
+            {
+                "package_name": "laminas/laminas-i18n-resources",
+                "younger_chunk": 69495,
+                "older_chunk": 38480,
+                "last_year_trend": 80.60031185031184
+            },
+            {
+                "package_name": "laminas/laminas-permissions-rbac",
+                "younger_chunk": 136945,
+                "older_chunk": 77424,
+                "last_year_trend": 76.8766790659227
+            },
+            {
+                "package_name": "laminas/laminas-paginator",
+                "younger_chunk": 236452,
+                "older_chunk": 137137,
+                "last_year_trend": 72.42028044947753
+            },
+            {
+                "package_name": "laminas/laminas-permissions-acl",
+                "younger_chunk": 197503,
+                "older_chunk": 118090,
+                "last_year_trend": 67.24786180032177
+            },
+            {
+                "package_name": "laminas/laminas-navigation",
+                "younger_chunk": 88021,
+                "older_chunk": 52703,
+                "last_year_trend": 67.01326300210616
+            },
+            {
+                "package_name": "laminas/laminas-diagnostics",
+                "younger_chunk": 362222,
+                "older_chunk": 223510,
+                "last_year_trend": 62.06075790792357
+            },
+            {
+                "package_name": "laminas/laminas-dom",
+                "younger_chunk": 164882,
+                "older_chunk": 102659,
+                "last_year_trend": 60.61134435363681
+            },
+            {
+                "package_name": "laminas/laminas-authentication",
+                "younger_chunk": 225173,
+                "older_chunk": 143723,
+                "last_year_trend": 56.671513953925256
+            },
+            {
+                "package_name": "laminas/laminas-mvc-plugin-flashmessenger",
+                "younger_chunk": 114080,
+                "older_chunk": 74370,
+                "last_year_trend": 53.39518623100713
+            },
+            {
+                "package_name": "laminas/laminas-httphandlerrunner",
+                "younger_chunk": 594865,
+                "older_chunk": 389598,
+                "last_year_trend": 52.686872109199726
+            },
+            {
+                "package_name": "laminas/laminas-ldap",
+                "younger_chunk": 153776,
+                "older_chunk": 101628,
+                "last_year_trend": 51.31263037745504
+            },
+            {
+                "package_name": "laminas/laminas-mvc-console",
+                "younger_chunk": 145477,
+                "older_chunk": 97954,
+                "last_year_trend": 48.51562978540949
+            },
+            {
+                "package_name": "laminas/laminas-router",
+                "younger_chunk": 315184,
+                "older_chunk": 214160,
+                "last_year_trend": 47.172207695181186
+            },
+            {
+                "package_name": "laminas/laminas-cache",
+                "younger_chunk": 318303,
+                "older_chunk": 219831,
+                "last_year_trend": 44.79441025151138
+            },
+            {
+                "package_name": "laminas/laminas-xmlrpc",
+                "younger_chunk": 79177,
+                "older_chunk": 55880,
+                "last_year_trend": 41.69112383679311
+            },
+            {
+                "package_name": "laminas/laminas-stratigility",
+                "younger_chunk": 241033,
+                "older_chunk": 171221,
+                "last_year_trend": 40.773036017778196
+            },
+            {
+                "package_name": "laminas/laminas-test",
+                "younger_chunk": 103520,
+                "older_chunk": 74119,
+                "last_year_trend": 39.66729178753084
+            },
+            {
+                "package_name": "laminas/laminas-mvc-i18n",
+                "younger_chunk": 134737,
+                "older_chunk": 96774,
+                "last_year_trend": 39.22851179035692
+            },
+            {
+                "package_name": "laminas/laminas-component-installer",
+                "younger_chunk": 199605,
+                "older_chunk": 153002,
+                "last_year_trend": 30.459078966288047
+            },
+            {
+                "package_name": "laminas/laminas-xml",
+                "younger_chunk": 130323,
+                "older_chunk": 100349,
+                "last_year_trend": 29.869754556597485
+            },
+            {
+                "package_name": "laminas/laminas-development-mode",
+                "younger_chunk": 164855,
+                "older_chunk": 133814,
+                "last_year_trend": 23.1971243666582
+            },
+            {
+                "package_name": "laminas/laminas-composer-autoloading",
+                "younger_chunk": 88460,
+                "older_chunk": 72366,
+                "last_year_trend": 22.239725838100767
+            }
+        ]
+    },
+    {
+        "vendor_key": "laminas-api-tools",
+        "vendor_name": "Laminas API Tools",
+        "vendor_total_last_year": 234567,
+        "vendor_total_previous_year": 32,
+        "packages_data": [
+            {
+                "package_name": "laminas-api-tools/api-tools-api-problem",
+                "younger_chunk": 88960,
+                "older_chunk": 54698,
+                "last_year_trend": 62.63848769607662
+            },
+            {
+                "package_name": "laminas-api-tools/api-tools-oauth2",
+                "younger_chunk": 80692,
+                "older_chunk": 50621,
+                "last_year_trend": 59.40419983801189
+            },
+            {
+                "package_name": "laminas-api-tools/api-tools-content-negotiation",
+                "younger_chunk": 83058,
+                "older_chunk": 52735,
+                "last_year_trend": 57.500711102683226
+            }
+        ]
+    },
+    {
+        "vendor_key": "mezzio",
+        "vendor_name": "Mezzio",
+        "vendor_total_last_year": 123456,
+        "vendor_total_previous_year": 16,
+        "packages_data": [
+            {
+                "package_name": "mezzio/mezzio-template",
+                "younger_chunk": 176348,
+                "older_chunk": 113896,
+                "last_year_trend": 54.832478752546166
+            },
+            {
+                "package_name": "mezzio/mezzio",
+                "younger_chunk": 164951,
+                "older_chunk": 112256,
+                "last_year_trend": 46.941811573546175
+            },
+            {
+                "package_name": "mezzio/mezzio-fastroute",
+                "younger_chunk": 119701,
+                "older_chunk": 83493,
+                "last_year_trend": 43.36650976728589
+            },
+            {
+                "package_name": "mezzio/mezzio-router",
+                "younger_chunk": 227421,
+                "older_chunk": 160830,
+                "last_year_trend": 41.4045886961388
+            },
+            {
+                "package_name": "mezzio/mezzio-helpers",
+                "younger_chunk": 188993,
+                "older_chunk": 146841,
+                "last_year_trend": 28.7058791481943
+            }
+        ]
+    },
+    {
+        "vendor_key": "symfony",
+        "vendor_name": "Symfony",
+        "vendor_total_last_year": 677308320,
+        "vendor_total_previous_year": 523930259,
+        "packages_data": [
+            {
+                "package_name": "symfony/uid",
+                "younger_chunk": 581968,
+                "older_chunk": 77125,
+                "last_year_trend": 654.5776337115072
+            },
+            {
+                "package_name": "symfony/amazon-sqs-messenger",
+                "younger_chunk": 80118,
+                "older_chunk": 14153,
+                "last_year_trend": 466.0849289903201
+            },
+            {
+                "package_name": "symfony/amqp-messenger",
+                "younger_chunk": 1309301,
+                "older_chunk": 269592,
+                "last_year_trend": 385.6601827947417
+            },
+            {
+                "package_name": "symfony/redis-messenger",
+                "younger_chunk": 1308582,
+                "older_chunk": 269503,
+                "last_year_trend": 385.5537786221304
+            },
+            {
+                "package_name": "symfony/doctrine-messenger",
+                "younger_chunk": 1310467,
+                "older_chunk": 272091,
+                "last_year_trend": 381.62820526956057
+            },
+            {
+                "package_name": "symfony/slack-notifier",
+                "younger_chunk": 72210,
+                "older_chunk": 20357,
+                "last_year_trend": 254.71827872476297
+            },
+            {
+                "package_name": "symfony/error-handler",
+                "younger_chunk": 8384265,
+                "older_chunk": 2468883,
+                "last_year_trend": 239.59750219026176
+            },
+            {
+                "package_name": "symfony/string",
+                "younger_chunk": 27669041,
+                "older_chunk": 8180920,
+                "last_year_trend": 238.21429619162637
+            },
+            {
+                "package_name": "symfony/mailchimp-mailer",
+                "younger_chunk": 113560,
+                "older_chunk": 51780,
+                "last_year_trend": 119.31247585940517
+            },
+            {
+                "package_name": "symfony/sendgrid-mailer",
+                "younger_chunk": 269197,
+                "older_chunk": 140275,
+                "last_year_trend": 91.90661201211904
+            },
+            {
+                "package_name": "symfony/mailgun-mailer",
+                "younger_chunk": 218541,
+                "older_chunk": 118864,
+                "last_year_trend": 83.85802261407994
+            },
+            {
+                "package_name": "symfony/http-client",
+                "younger_chunk": 10593832,
+                "older_chunk": 5831194,
+                "last_year_trend": 81.67517664478322
+            },
+            {
+                "package_name": "symfony/property-info",
+                "younger_chunk": 9988787,
+                "older_chunk": 5890230,
+                "last_year_trend": 69.58229135364832
+            },
+            {
+                "package_name": "symfony/mailer",
+                "younger_chunk": 3040456,
+                "older_chunk": 1803883,
+                "last_year_trend": 68.55062107686584
+            },
+            {
+                "package_name": "symfony/notifier",
+                "younger_chunk": 982860,
+                "older_chunk": 590712,
+                "last_year_trend": 66.38564985983018
+            },
+            {
+                "package_name": "symfony/google-mailer",
+                "younger_chunk": 172842,
+                "older_chunk": 111869,
+                "last_year_trend": 54.503928702321446
+            },
+            {
+                "package_name": "symfony/messenger",
+                "younger_chunk": 3209531,
+                "older_chunk": 2124258,
+                "last_year_trend": 51.08950984296635
+            },
+            {
+                "package_name": "symfony/mime",
+                "younger_chunk": 5835068,
+                "older_chunk": 3896142,
+                "last_year_trend": 49.765280628888775
+            },
+            {
+                "package_name": "symfony/var-exporter",
+                "younger_chunk": 13660541,
+                "older_chunk": 9918531,
+                "last_year_trend": 37.72746185901926
+            },
+            {
+                "package_name": "symfony/security-core",
+                "younger_chunk": 7608247,
+                "older_chunk": 5553849,
+                "last_year_trend": 36.990526750007064
+            },
+            {
+                "package_name": "symfony/workflow",
+                "younger_chunk": 1467834,
+                "older_chunk": 1073866,
+                "last_year_trend": 36.686886445794926
+            },
+            {
+                "package_name": "symfony/var-dumper",
+                "younger_chunk": 17739709,
+                "older_chunk": 13313012,
+                "last_year_trend": 33.25090520462237
+            },
+            {
+                "package_name": "symfony/intl",
+                "younger_chunk": 10156683,
+                "older_chunk": 7635321,
+                "last_year_trend": 33.02234444367173
+            },
+            {
+                "package_name": "symfony/cache",
+                "younger_chunk": 14011259,
+                "older_chunk": 10547159,
+                "last_year_trend": 32.84391559850383
+            },
+            {
+                "package_name": "symfony/http-foundation",
+                "younger_chunk": 13215364,
+                "older_chunk": 10043753,
+                "last_year_trend": 31.57794700845392
+            },
+            {
+                "package_name": "symfony/stopwatch",
+                "younger_chunk": 16345019,
+                "older_chunk": 12426776,
+                "last_year_trend": 31.53064801361188
+            },
+            {
+                "package_name": "symfony/http-kernel",
+                "younger_chunk": 13940821,
+                "older_chunk": 10599246,
+                "last_year_trend": 31.52653500069721
+            },
+            {
+                "package_name": "symfony/lock",
+                "younger_chunk": 3116401,
+                "older_chunk": 2385670,
+                "last_year_trend": 30.630011694827857
+            },
+            {
+                "package_name": "symfony/options-resolver",
+                "younger_chunk": 22271571,
+                "older_chunk": 17118071,
+                "last_year_trend": 30.10561178300989
+            },
+            {
+                "package_name": "symfony/property-access",
+                "younger_chunk": 13289457,
+                "older_chunk": 10227309,
+                "last_year_trend": 29.94089647628718
+            },
+            {
+                "package_name": "symfony/expression-language",
+                "younger_chunk": 8588372,
+                "older_chunk": 6643031,
+                "last_year_trend": 29.28393680535285
+            },
+            {
+                "package_name": "symfony/mercure",
+                "younger_chunk": 461348,
+                "older_chunk": 358360,
+                "last_year_trend": 28.738698515459305
+            },
+            {
+                "package_name": "symfony/flex",
+                "younger_chunk": 8386956,
+                "older_chunk": 6519704,
+                "last_year_trend": 28.640134582797003
+            },
+            {
+                "package_name": "symfony/dependency-injection",
+                "younger_chunk": 19791853,
+                "older_chunk": 15481329,
+                "last_year_trend": 27.8433718448849
+            },
+            {
+                "package_name": "symfony/dotenv",
+                "younger_chunk": 9345080,
+                "older_chunk": 7324355,
+                "last_year_trend": 27.589118768819915
+            },
+            {
+                "package_name": "symfony/finder",
+                "younger_chunk": 21370107,
+                "older_chunk": 16801135,
+                "last_year_trend": 27.19442466238145
+            },
+            {
+                "package_name": "symfony/web-link",
+                "younger_chunk": 3881999,
+                "older_chunk": 3060777,
+                "last_year_trend": 26.830507416907537
+            },
+            {
+                "package_name": "symfony/asset",
+                "younger_chunk": 7311391,
+                "older_chunk": 5769764,
+                "last_year_trend": 26.71906511254187
+            },
+            {
+                "package_name": "symfony/form",
+                "younger_chunk": 6689322,
+                "older_chunk": 5302929,
+                "last_year_trend": 26.1439102805261
+            },
+            {
+                "package_name": "symfony/process",
+                "younger_chunk": 19776878,
+                "older_chunk": 15702792,
+                "last_year_trend": 25.944978447144933
+            },
+            {
+                "package_name": "symfony/filesystem",
+                "younger_chunk": 32271706,
+                "older_chunk": 25746926,
+                "last_year_trend": 25.341976747049344
+            },
+            {
+                "package_name": "symfony/routing",
+                "younger_chunk": 13994748,
+                "older_chunk": 11169428,
+                "last_year_trend": 25.295118066923393
+            },
+            {
+                "package_name": "symfony/config",
+                "younger_chunk": 21287391,
+                "older_chunk": 17017861,
+                "last_year_trend": 25.08852316986254
+            },
+            {
+                "package_name": "symfony/console",
+                "younger_chunk": 27567250,
+                "older_chunk": 22058012,
+                "last_year_trend": 24.976131121879888
+            },
+            {
+                "package_name": "symfony/event-dispatcher",
+                "younger_chunk": 46828409,
+                "older_chunk": 38451175,
+                "last_year_trend": 21.786678820608202
+            },
+            {
+                "package_name": "symfony/yaml",
+                "younger_chunk": 33033563,
+                "older_chunk": 27258314,
+                "last_year_trend": 21.1871101051958
+            },
+            {
+                "package_name": "symfony/validator",
+                "younger_chunk": 11753267,
+                "older_chunk": 9714814,
+                "last_year_trend": 20.982933898682973
+            },
+            {
+                "package_name": "symfony/serializer",
+                "younger_chunk": 12284937,
+                "older_chunk": 10213143,
+                "last_year_trend": 20.28556733221106
+            },
+            {
+                "package_name": "symfony/security-acl",
+                "younger_chunk": 2244709,
+                "older_chunk": 1873973,
+                "last_year_trend": 19.783422706730562
+            },
+            {
+                "package_name": "symfony/translation",
+                "younger_chunk": 38645965,
+                "older_chunk": 32297502,
+                "last_year_trend": 19.656204371471205
+            },
+            {
+                "package_name": "symfony/css-selector",
+                "younger_chunk": 34635178,
+                "older_chunk": 29171428,
+                "last_year_trend": 18.729799583345724
+            },
+            {
+                "package_name": "symfony/amazon-mailer",
+                "younger_chunk": 260930,
+                "older_chunk": 221266,
+                "last_year_trend": 17.92593529959416
+            },
+            {
+                "package_name": "symfony/browser-kit",
+                "younger_chunk": 12311921,
+                "older_chunk": 10595042,
+                "last_year_trend": 16.204551147602814
+            },
+            {
+                "package_name": "symfony/dom-crawler",
+                "younger_chunk": 17012376,
+                "older_chunk": 14812676,
+                "last_year_trend": 14.85011891166728
+            },
+            {
+                "package_name": "symfony/templating",
+                "younger_chunk": 3749418,
+                "older_chunk": 3277421,
+                "last_year_trend": 14.401476038629156
+            },
+            {
+                "package_name": "symfony/panther",
+                "younger_chunk": 382555,
+                "older_chunk": 335840,
+                "last_year_trend": 13.909897570271568
+            },
+            {
+                "package_name": "symfony/symfony",
+                "younger_chunk": 4928700,
+                "older_chunk": 4383418,
+                "last_year_trend": 12.439653256887652
+            },
+            {
+                "package_name": "symfony/ldap",
+                "younger_chunk": 238357,
+                "older_chunk": 216803,
+                "last_year_trend": 9.941744348556057
+            },
+            {
+                "package_name": "symfony/website-skeleton",
+                "younger_chunk": 255575,
+                "older_chunk": 234092,
+                "last_year_trend": 9.177161116142372
+            },
+            {
+                "package_name": "symfony/security",
+                "younger_chunk": 1765314,
+                "older_chunk": 1798577,
+                "last_year_trend": -1.849406503029897
+            },
+            {
+                "package_name": "symfony/debug",
+                "younger_chunk": 26629079,
+                "older_chunk": 27763180,
+                "last_year_trend": -4.084910302061942
+            },
+            {
+                "package_name": "symfony/inflector",
+                "younger_chunk": 7660134,
+                "older_chunk": 9380798,
+                "last_year_trend": -18.342405411565196
+            }
+        ]
+    },
+    {
+        "vendor_key": "doctrine",
+        "vendor_name": "Doctrine",
+        "vendor_total_last_year": 343553546,
+        "vendor_total_previous_year": 283070135,
+        "packages_data": [
+            {
+                "package_name": "doctrine/sql-formatter",
+                "younger_chunk": 5207894,
+                "older_chunk": 1395694,
+                "last_year_trend": 273.1401009103715
+            },
+            {
+                "package_name": "doctrine/event-manager",
+                "younger_chunk": 25658204,
+                "older_chunk": 20036044,
+                "last_year_trend": 28.060229853757562
+            },
+            {
+                "package_name": "doctrine/instantiator",
+                "younger_chunk": 48026818,
+                "older_chunk": 37964516,
+                "last_year_trend": 26.504491720637247
+            },
+            {
+                "package_name": "doctrine/persistence",
+                "younger_chunk": 13808430,
+                "older_chunk": 11067339,
+                "last_year_trend": 24.767389884777174
+            },
+            {
+                "package_name": "doctrine/dbal",
+                "younger_chunk": 27190220,
+                "older_chunk": 22088189,
+                "last_year_trend": 23.0984577323202
+            },
+            {
+                "package_name": "doctrine/annotations",
+                "younger_chunk": 28743914,
+                "older_chunk": 23728079,
+                "last_year_trend": 21.138816167967065
+            },
+            {
+                "package_name": "doctrine/migrations",
+                "younger_chunk": 9412979,
+                "older_chunk": 7790111,
+                "last_year_trend": 20.832411758959537
+            },
+            {
+                "package_name": "doctrine/lexer",
+                "younger_chunk": 44643945,
+                "older_chunk": 37114810,
+                "last_year_trend": 20.286066397753345
+            },
+            {
+                "package_name": "doctrine/cache",
+                "younger_chunk": 31094886,
+                "older_chunk": 25986569,
+                "last_year_trend": 19.65752770209872
+            },
+            {
+                "package_name": "doctrine/orm",
+                "younger_chunk": 13028378,
+                "older_chunk": 10965352,
+                "last_year_trend": 18.814042631736754
+            },
+            {
+                "package_name": "doctrine/data-fixtures",
+                "younger_chunk": 6114896,
+                "older_chunk": 5192050,
+                "last_year_trend": 17.774212497953613
+            },
+            {
+                "package_name": "doctrine/inflector",
+                "younger_chunk": 41282322,
+                "older_chunk": 35288761,
+                "last_year_trend": 16.984333907331006
+            },
+            {
+                "package_name": "doctrine/mongodb-odm",
+                "younger_chunk": 866343,
+                "older_chunk": 751179,
+                "last_year_trend": 15.331099511567814
+            },
+            {
+                "package_name": "doctrine/collections",
+                "younger_chunk": 19077675,
+                "older_chunk": 16604141,
+                "last_year_trend": 14.897091032893542
+            },
+            {
+                "package_name": "doctrine/common",
+                "younger_chunk": 17381114,
+                "older_chunk": 15370320,
+                "last_year_trend": 13.082317089039137
+            },
+            {
+                "package_name": "doctrine/reflection",
+                "younger_chunk": 11495470,
+                "older_chunk": 11162949,
+                "last_year_trend": 2.97879171534332
+            },
+            {
+                "package_name": "doctrine/mongodb",
+                "younger_chunk": 520058,
+                "older_chunk": 564032,
+                "last_year_trend": -7.796366163621926
+            }
+        ]
+    },
+    {
+        "vendor_key": "illuminate",
+        "vendor_name": "Laravel",
+        "vendor_total_last_year": 72643127,
+        "vendor_total_previous_year": 61828424,
+        "packages_data": [
+            {
+                "package_name": "illuminate/collections",
+                "younger_chunk": 857084,
+                "older_chunk": 4202,
+                "last_year_trend": 20297.049024274158
+            },
+            {
+                "package_name": "illuminate/macroable",
+                "younger_chunk": 914579,
+                "older_chunk": 6997,
+                "last_year_trend": 12971.016149778476
+            },
+            {
+                "package_name": "illuminate/testing",
+                "younger_chunk": 624300,
+                "older_chunk": 293213,
+                "last_year_trend": 112.91688976955322
+            },
+            {
+                "package_name": "laravel/framework",
+                "younger_chunk": 21949221,
+                "older_chunk": 18397931,
+                "last_year_trend": 19.302659630585637
+            },
+            {
+                "package_name": "illuminate/log",
+                "younger_chunk": 1387113,
+                "older_chunk": 1177665,
+                "last_year_trend": 17.785023754633116
+            },
+            {
+                "package_name": "illuminate/mail",
+                "younger_chunk": 533317,
+                "older_chunk": 453537,
+                "last_year_trend": 17.59062656409509
+            },
+            {
+                "package_name": "illuminate/cookie",
+                "younger_chunk": 221514,
+                "older_chunk": 188755,
+                "last_year_trend": 17.35530184630872
+            },
+            {
+                "package_name": "illuminate/pipeline",
+                "younger_chunk": 1901291,
+                "older_chunk": 1626917,
+                "last_year_trend": 16.86465873796881
+            },
+            {
+                "package_name": "illuminate/bus",
+                "younger_chunk": 1730228,
+                "older_chunk": 1488882,
+                "last_year_trend": 16.209880971091067
+            },
+            {
+                "package_name": "illuminate/notifications",
+                "younger_chunk": 166365,
+                "older_chunk": 144564,
+                "last_year_trend": 15.080517971279164
+            },
+            {
+                "package_name": "illuminate/filesystem",
+                "younger_chunk": 2685298,
+                "older_chunk": 2359412,
+                "last_year_trend": 13.812170150868113
+            },
+            {
+                "package_name": "illuminate/http",
+                "younger_chunk": 1803856,
+                "older_chunk": 1588803,
+                "last_year_trend": 13.535535871974076
+            },
+            {
+                "package_name": "illuminate/session",
+                "younger_chunk": 1854820,
+                "older_chunk": 1633759,
+                "last_year_trend": 13.530820641232879
+            },
+            {
+                "package_name": "illuminate/view",
+                "younger_chunk": 2098288,
+                "older_chunk": 1850271,
+                "last_year_trend": 13.40436076661203
+            },
+            {
+                "package_name": "illuminate/events",
+                "younger_chunk": 2518612,
+                "older_chunk": 2246125,
+                "last_year_trend": 12.131426345372589
+            },
+            {
+                "package_name": "illuminate/config",
+                "younger_chunk": 2279833,
+                "older_chunk": 2034917,
+                "last_year_trend": 12.035675165129575
+            },
+            {
+                "package_name": "illuminate/support",
+                "younger_chunk": 4761852,
+                "older_chunk": 4253178,
+                "last_year_trend": 11.959856841166754
+            },
+            {
+                "package_name": "illuminate/translation",
+                "younger_chunk": 1780593,
+                "older_chunk": 1592321,
+                "last_year_trend": 11.823746593808664
+            },
+            {
+                "package_name": "illuminate/validation",
+                "younger_chunk": 1779628,
+                "older_chunk": 1597536,
+                "last_year_trend": 11.39830338721633
+            },
+            {
+                "package_name": "illuminate/broadcasting",
+                "younger_chunk": 1552313,
+                "older_chunk": 1397753,
+                "last_year_trend": 11.057747685034485
+            },
+            {
+                "package_name": "illuminate/pagination",
+                "younger_chunk": 1722839,
+                "older_chunk": 1554105,
+                "last_year_trend": 10.857310156006193
+            },
+            {
+                "package_name": "illuminate/hashing",
+                "younger_chunk": 1594744,
+                "older_chunk": 1439560,
+                "last_year_trend": 10.779960543499413
+            },
+            {
+                "package_name": "illuminate/container",
+                "younger_chunk": 3453655,
+                "older_chunk": 3120285,
+                "last_year_trend": 10.68395995878582
+            },
+            {
+                "package_name": "illuminate/console",
+                "younger_chunk": 2082876,
+                "older_chunk": 1883421,
+                "last_year_trend": 10.59003802123901
+            },
+            {
+                "package_name": "illuminate/cache",
+                "younger_chunk": 1797980,
+                "older_chunk": 1627443,
+                "last_year_trend": 10.478830902218988
+            },
+            {
+                "package_name": "illuminate/auth",
+                "younger_chunk": 1562312,
+                "older_chunk": 1418620,
+                "last_year_trend": 10.128998604277399
+            },
+            {
+                "package_name": "illuminate/queue",
+                "younger_chunk": 1724008,
+                "older_chunk": 1570570,
+                "last_year_trend": 9.76957410366937
+            },
+            {
+                "package_name": "illuminate/database",
+                "younger_chunk": 2491743,
+                "older_chunk": 2271011,
+                "last_year_trend": 9.719547813727019
+            },
+            {
+                "package_name": "illuminate/encryption",
+                "younger_chunk": 1642707,
+                "older_chunk": 1500614,
+                "last_year_trend": 9.468990693142928
+            },
+            {
+                "package_name": "illuminate/routing",
+                "younger_chunk": 430967,
+                "older_chunk": 398710,
+                "last_year_trend": 8.090341350856505
+            },
+            {
+                "package_name": "illuminate/redis",
+                "younger_chunk": 739191,
+                "older_chunk": 707347,
+                "last_year_trend": 4.501892282005855
+            }
+        ]
+    },
+    {
+        "vendor_key": "yiisoft",
+        "vendor_name": "Yii",
+        "vendor_total_last_year": 11320845,
+        "vendor_total_previous_year": 10466615,
+        "packages_data": [
+            {
+                "package_name": "yiisoft/yii2-bootstrap4",
+                "younger_chunk": 161896,
+                "older_chunk": 113833,
+                "last_year_trend": 42.22237839642281
+            },
+            {
+                "package_name": "yiisoft/yii2-mongodb",
+                "younger_chunk": 115745,
+                "older_chunk": 92076,
+                "last_year_trend": 25.705938572483603
+            },
+            {
+                "package_name": "yiisoft/yii2-queue",
+                "younger_chunk": 597260,
+                "older_chunk": 502899,
+                "last_year_trend": 18.763409750267954
+            },
+            {
+                "package_name": "yiisoft/yii2-imagine",
+                "younger_chunk": 275623,
+                "older_chunk": 240458,
+                "last_year_trend": 14.62417553169368
+            },
+            {
+                "package_name": "yiisoft/yii2-httpclient",
+                "younger_chunk": 550784,
+                "older_chunk": 487046,
+                "last_year_trend": 13.086648899693245
+            },
+            {
+                "package_name": "yiisoft/yii2-authclient",
+                "younger_chunk": 287214,
+                "older_chunk": 254045,
+                "last_year_trend": 13.056348284752701
+            },
+            {
+                "package_name": "yiisoft/yii2-debug",
+                "younger_chunk": 1177939,
+                "older_chunk": 1059048,
+                "last_year_trend": 11.226214486973205
+            },
+            {
+                "package_name": "yiisoft/yii2-redis",
+                "younger_chunk": 583436,
+                "older_chunk": 527220,
+                "last_year_trend": 10.662721444558244
+            },
+            {
+                "package_name": "yiisoft/yii2-faker",
+                "younger_chunk": 780646,
+                "older_chunk": 706924,
+                "last_year_trend": 10.428560920268652
+            },
+            {
+                "package_name": "yiisoft/yii2-swiftmailer",
+                "younger_chunk": 1215449,
+                "older_chunk": 1107729,
+                "last_year_trend": 9.72440010146886
+            },
+            {
+                "package_name": "yiisoft/yii2-jui",
+                "younger_chunk": 430493,
+                "older_chunk": 394831,
+                "last_year_trend": 9.032218848064105
+            },
+            {
+                "package_name": "yiisoft/yii2",
+                "younger_chunk": 1470853,
+                "older_chunk": 1368423,
+                "last_year_trend": 7.485258578670482
+            },
+            {
+                "package_name": "yiisoft/yii2-composer",
+                "younger_chunk": 1451820,
+                "older_chunk": 1370402,
+                "last_year_trend": 5.941176384739649
+            },
+            {
+                "package_name": "yiisoft/yii2-bootstrap",
+                "younger_chunk": 939746,
+                "older_chunk": 908323,
+                "last_year_trend": 3.4594521992727323
+            },
+            {
+                "package_name": "yiisoft/yii2-gii",
+                "younger_chunk": 831320,
+                "older_chunk": 811325,
+                "last_year_trend": 2.4644871044279455
+            },
+            {
+                "package_name": "yiisoft/yii2-twig",
+                "younger_chunk": 97117,
+                "older_chunk": 96945,
+                "last_year_trend": 0.17742018670378457
+            },
+            {
+                "package_name": "yiisoft/yii",
+                "younger_chunk": 223080,
+                "older_chunk": 237527,
+                "last_year_trend": -6.082255911959479
+            },
+            {
+                "package_name": "yiisoft/yii2-shell",
+                "younger_chunk": 130424,
+                "older_chunk": 187561,
+                "last_year_trend": -30.463155986585704
+            }
+        ]
+    },
+    {
+        "vendor_key": "nette",
+        "vendor_name": "Nette",
+        "vendor_total_last_year": 35201445,
+        "vendor_total_previous_year": 33031507,
+        "packages_data": [
+            {
+                "package_name": "nette/command-line",
+                "younger_chunk": 73775,
+                "older_chunk": 29665,
+                "last_year_trend": 148.6937468397101
+            },
+            {
+                "package_name": "nette/forms",
+                "younger_chunk": 588762,
+                "older_chunk": 309627,
+                "last_year_trend": 90.152021626021
+            },
+            {
+                "package_name": "nette/tester",
+                "younger_chunk": 316221,
+                "older_chunk": 227555,
+                "last_year_trend": 38.964645909780074
+            },
+            {
+                "package_name": "nette/routing",
+                "younger_chunk": 647201,
+                "older_chunk": 478574,
+                "last_year_trend": 35.23530321329616
+            },
+            {
+                "package_name": "nette/http",
+                "younger_chunk": 906922,
+                "older_chunk": 709274,
+                "last_year_trend": 27.866240691185638
+            },
+            {
+                "package_name": "nette/security",
+                "younger_chunk": 328095,
+                "older_chunk": 262607,
+                "last_year_trend": 24.937644464922855
+            },
+            {
+                "package_name": "nette/component-model",
+                "younger_chunk": 829125,
+                "older_chunk": 673340,
+                "last_year_trend": 23.13615706775181
+            },
+            {
+                "package_name": "nette/application",
+                "younger_chunk": 802515,
+                "older_chunk": 654184,
+                "last_year_trend": 22.67420175363506
+            },
+            {
+                "package_name": "nette/tokenizer",
+                "younger_chunk": 163902,
+                "older_chunk": 136484,
+                "last_year_trend": 20.08880161777205
+            },
+            {
+                "package_name": "nette/utils",
+                "younger_chunk": 6121136,
+                "older_chunk": 5102902,
+                "last_year_trend": 19.95401832133949
+            },
+            {
+                "package_name": "nette/caching",
+                "younger_chunk": 698552,
+                "older_chunk": 583636,
+                "last_year_trend": 19.68966958857918
+            },
+            {
+                "package_name": "nette/finder",
+                "younger_chunk": 5178776,
+                "older_chunk": 4449152,
+                "last_year_trend": 16.399169999136916
+            },
+            {
+                "package_name": "nette/database",
+                "younger_chunk": 213313,
+                "older_chunk": 186574,
+                "last_year_trend": 14.33157889094943
+            },
+            {
+                "package_name": "nette/mail",
+                "younger_chunk": 343357,
+                "older_chunk": 307335,
+                "last_year_trend": 11.720760733401676
+            },
+            {
+                "package_name": "nette/safe-stream",
+                "younger_chunk": 186730,
+                "older_chunk": 169603,
+                "last_year_trend": 10.098288355748423
+            },
+            {
+                "package_name": "nette/neon",
+                "younger_chunk": 3480613,
+                "older_chunk": 3180295,
+                "last_year_trend": 9.443086254577011
+            },
+            {
+                "package_name": "nette/robot-loader",
+                "younger_chunk": 4209103,
+                "older_chunk": 3869689,
+                "last_year_trend": 8.771092457300838
+            },
+            {
+                "package_name": "nette/reflection",
+                "younger_chunk": 259200,
+                "older_chunk": 249575,
+                "last_year_trend": 3.8565561454472714
+            },
+            {
+                "package_name": "nette/schema",
+                "younger_chunk": 2242950,
+                "older_chunk": 2493505,
+                "last_year_trend": -10.048305497682989
+            },
+            {
+                "package_name": "nette/php-generator",
+                "younger_chunk": 2765758,
+                "older_chunk": 3166217,
+                "last_year_trend": -12.64786968170533
+            },
+            {
+                "package_name": "nette/di",
+                "younger_chunk": 2589006,
+                "older_chunk": 2965461,
+                "last_year_trend": -12.694653546278303
+            },
+            {
+                "package_name": "nette/bootstrap",
+                "younger_chunk": 2256433,
+                "older_chunk": 2826253,
+                "last_year_trend": -20.161676962395077
+            }
+        ]
+    },
+    {
+        "vendor_key": "cakephp",
+        "vendor_name": "CakePHP",
+        "vendor_total_last_year": 13765574,
+        "vendor_total_previous_year": 12945367,
+        "packages_data": [
+            {
+                "package_name": "cakephp/twig-view",
+                "younger_chunk": 143888,
+                "older_chunk": 63926,
+                "last_year_trend": 125.08525482589246
+            },
+            {
+                "package_name": "cakephp/authorization",
+                "younger_chunk": 74445,
+                "older_chunk": 36052,
+                "last_year_trend": 106.49339842449797
+            },
+            {
+                "package_name": "cakephp/authentication",
+                "younger_chunk": 90491,
+                "older_chunk": 54100,
+                "last_year_trend": 67.26617375231055
+            },
+            {
+                "package_name": "cakephp/core",
+                "younger_chunk": 1142771,
+                "older_chunk": 1002873,
+                "last_year_trend": 13.94972244740859
+            },
+            {
+                "package_name": "cakephp/utility",
+                "younger_chunk": 1152467,
+                "older_chunk": 1012712,
+                "last_year_trend": 13.80007346609895
+            },
+            {
+                "package_name": "cakephp/database",
+                "younger_chunk": 1005669,
+                "older_chunk": 884339,
+                "last_year_trend": 13.71985177629847
+            },
+            {
+                "package_name": "cakephp/datasource",
+                "younger_chunk": 1008207,
+                "older_chunk": 889858,
+                "last_year_trend": 13.299762434006325
+            },
+            {
+                "package_name": "cakephp/chronos",
+                "younger_chunk": 3655450,
+                "older_chunk": 3298283,
+                "last_year_trend": 10.828876721615458
+            },
+            {
+                "package_name": "cakephp/migrations",
+                "younger_chunk": 525252,
+                "older_chunk": 496401,
+                "last_year_trend": 5.812035028132499
+            },
+            {
+                "package_name": "cakephp/cakephp",
+                "younger_chunk": 794935,
+                "older_chunk": 764536,
+                "last_year_trend": 3.9761371603168385
+            },
+            {
+                "package_name": "cakephp/bake",
+                "younger_chunk": 466755,
+                "older_chunk": 454379,
+                "last_year_trend": 2.723717425321155
+            },
+            {
+                "package_name": "cakephp/cakephp-codesniffer",
+                "younger_chunk": 462879,
+                "older_chunk": 455375,
+                "last_year_trend": 1.6478726324457966
+            },
+            {
+                "package_name": "cakephp/plugin-installer",
+                "younger_chunk": 518099,
+                "older_chunk": 518632,
+                "last_year_trend": -0.10277036511438098
+            },
+            {
+                "package_name": "cakephp/debug_kit",
+                "younger_chunk": 589451,
+                "older_chunk": 600677,
+                "last_year_trend": -1.868891267686294
+            },
+            {
+                "package_name": "cakephp/log",
+                "younger_chunk": 670675,
+                "older_chunk": 743082,
+                "last_year_trend": -9.744146675602423
+            },
+            {
+                "package_name": "cakephp/cache",
+                "younger_chunk": 701598,
+                "older_chunk": 784446,
+                "last_year_trend": -10.561338830206296
+            },
+            {
+                "package_name": "cakephp/collection",
+                "younger_chunk": 762542,
+                "older_chunk": 885696,
+                "last_year_trend": -13.90477093720645
+            }
+        ]
+    },
+    {
+        "vendor_key": "zendframework",
+        "vendor_name": "Zend",
+        "vendor_total_last_year": 74267967,
+        "vendor_total_previous_year": 97155662,
+        "packages_data": [
+            {
+                "package_name": "zendframework/zend-version",
+                "younger_chunk": 195157,
+                "older_chunk": 180457,
+                "last_year_trend": 8.145984916074184
+            },
+            {
+                "package_name": "zendframework/zend-file",
+                "younger_chunk": 216620,
+                "older_chunk": 204605,
+                "last_year_trend": 5.872290510984584
+            },
+            {
+                "package_name": "zendframework/zend-progressbar",
+                "younger_chunk": 189562,
+                "older_chunk": 180390,
+                "last_year_trend": 5.084539054271303
+            },
+            {
+                "package_name": "zendframework/zend-tag",
+                "younger_chunk": 171164,
+                "older_chunk": 166441,
+                "last_year_trend": 2.837642167494778
+            },
+            {
+                "package_name": "zendframework/zend-i18n-resources",
+                "younger_chunk": 226007,
+                "older_chunk": 220079,
+                "last_year_trend": 2.693578215095485
+            },
+            {
+                "package_name": "zendframework/zend-test",
+                "younger_chunk": 244572,
+                "older_chunk": 239614,
+                "last_year_trend": 2.0691612343185284
+            },
+            {
+                "package_name": "zendframework/zend-permissions-rbac",
+                "younger_chunk": 276198,
+                "older_chunk": 271163,
+                "last_year_trend": 1.8568167485976943
+            },
+            {
+                "package_name": "zendframework/zend-navigation",
+                "younger_chunk": 238185,
+                "older_chunk": 236381,
+                "last_year_trend": 0.763174705242804
+            },
+            {
+                "package_name": "zendframework/zendframework",
+                "younger_chunk": 300960,
+                "older_chunk": 299978,
+                "last_year_trend": 0.32735733953823853
+            },
+            {
+                "package_name": "zendframework/zend-permissions-acl",
+                "younger_chunk": 361832,
+                "older_chunk": 362027,
+                "last_year_trend": -0.053863385880063674
+            },
+            {
+                "package_name": "zendframework/zend-dom",
+                "younger_chunk": 277167,
+                "older_chunk": 281126,
+                "last_year_trend": -1.4082653329823671
+            },
+            {
+                "package_name": "zendframework/zend-debug",
+                "younger_chunk": 233323,
+                "older_chunk": 236902,
+                "last_year_trend": -1.5107512811204629
+            },
+            {
+                "package_name": "zendframework/zend-paginator",
+                "younger_chunk": 474103,
+                "older_chunk": 491155,
+                "last_year_trend": -3.471816432694368
+            },
+            {
+                "package_name": "zendframework/zend-authentication",
+                "younger_chunk": 399414,
+                "older_chunk": 417180,
+                "last_year_trend": -4.258593412915289
+            },
+            {
+                "package_name": "zendframework/zendservice-google-gcm",
+                "younger_chunk": 219589,
+                "older_chunk": 233782,
+                "last_year_trend": -6.071040542043434
+            },
+            {
+                "package_name": "zendframework/zendservice-apple-apns",
+                "younger_chunk": 258712,
+                "older_chunk": 276579,
+                "last_year_trend": -6.45999877069481
+            },
+            {
+                "package_name": "zendframework/zend-xmlrpc",
+                "younger_chunk": 241478,
+                "older_chunk": 258431,
+                "last_year_trend": -6.559971520444535
+            },
+            {
+                "package_name": "zendframework/zendxml",
+                "younger_chunk": 425775,
+                "older_chunk": 459407,
+                "last_year_trend": -7.320741738806774
+            },
+            {
+                "package_name": "zendframework/zend-mvc-i18n",
+                "younger_chunk": 124837,
+                "older_chunk": 135170,
+                "last_year_trend": -7.64444773248502
+            },
+            {
+                "package_name": "zendframework/zend-cache",
+                "younger_chunk": 624686,
+                "older_chunk": 678422,
+                "last_year_trend": -7.920733702621675
+            },
+            {
+                "package_name": "zendframework/zend-memory",
+                "younger_chunk": 315535,
+                "older_chunk": 345726,
+                "last_year_trend": -8.7326379849939
+            },
+            {
+                "package_name": "zendframework/zendframework1",
+                "younger_chunk": 298991,
+                "older_chunk": 328140,
+                "last_year_trend": -8.883098677393804
+            },
+            {
+                "package_name": "zendframework/zend-mvc-plugin-flashmessenger",
+                "younger_chunk": 100197,
+                "older_chunk": 115631,
+                "last_year_trend": -13.34763169046363
+            },
+            {
+                "package_name": "zendframework/zend-code",
+                "younger_chunk": 7188063,
+                "older_chunk": 8301642,
+                "last_year_trend": -13.413960756197383
+            },
+            {
+                "package_name": "zendframework/zend-eventmanager",
+                "younger_chunk": 7232723,
+                "older_chunk": 8360561,
+                "last_year_trend": -13.48997991881167
+            },
+            {
+                "package_name": "zendframework/zend-mvc-console",
+                "younger_chunk": 120909,
+                "older_chunk": 140086,
+                "last_year_trend": -13.689447910569214
+            },
+            {
+                "package_name": "zendframework/zend-router",
+                "younger_chunk": 234089,
+                "older_chunk": 284167,
+                "last_year_trend": -17.622735926409476
+            },
+            {
+                "package_name": "zendframework/zend-uri",
+                "younger_chunk": 1861499,
+                "older_chunk": 2281126,
+                "last_year_trend": -18.395608133877744
+            },
+            {
+                "package_name": "zendframework/zend-validator",
+                "younger_chunk": 2348311,
+                "older_chunk": 2897593,
+                "last_year_trend": -18.956492509472525
+            },
+            {
+                "package_name": "zendframework/zend-hydrator",
+                "younger_chunk": 1524587,
+                "older_chunk": 1886241,
+                "last_year_trend": -19.17326577038672
+            },
+            {
+                "package_name": "zendframework/zenddiagnostics",
+                "younger_chunk": 394878,
+                "older_chunk": 488998,
+                "last_year_trend": -19.24752248475454
+            },
+            {
+                "package_name": "zendframework/zend-loader",
+                "younger_chunk": 1876048,
+                "older_chunk": 2376687,
+                "last_year_trend": -21.06457434235135
+            },
+            {
+                "package_name": "zendframework/zend-http",
+                "younger_chunk": 1622624,
+                "older_chunk": 2055867,
+                "last_year_trend": -21.07349356743407
+            },
+            {
+                "package_name": "zendframework/zend-json",
+                "younger_chunk": 1499609,
+                "older_chunk": 1928994,
+                "last_year_trend": -22.259530097035025
+            },
+            {
+                "package_name": "zendframework/zend-config",
+                "younger_chunk": 1323274,
+                "older_chunk": 1704180,
+                "last_year_trend": -22.351277447218024
+            },
+            {
+                "package_name": "zendframework/zend-servicemanager",
+                "younger_chunk": 1788465,
+                "older_chunk": 2319570,
+                "last_year_trend": -22.896700681591838
+            },
+            {
+                "package_name": "zendframework/zend-filter",
+                "younger_chunk": 1342054,
+                "older_chunk": 1773065,
+                "last_year_trend": -24.308809885706395
+            },
+            {
+                "package_name": "zendframework/zend-soap",
+                "younger_chunk": 1039931,
+                "older_chunk": 1378793,
+                "last_year_trend": -24.576713110669985
+            },
+            {
+                "package_name": "zendframework/zend-stratigility",
+                "younger_chunk": 182260,
+                "older_chunk": 241970,
+                "last_year_trend": -24.676612803240076
+            },
+            {
+                "package_name": "zendframework/zend-server",
+                "younger_chunk": 1131049,
+                "older_chunk": 1503937,
+                "last_year_trend": -24.794123690021593
+            },
+            {
+                "package_name": "zendframework/zendpdf",
+                "younger_chunk": 135967,
+                "older_chunk": 183082,
+                "last_year_trend": -25.734370391409314
+            },
+            {
+                "package_name": "zendframework/zend-i18n",
+                "younger_chunk": 1126700,
+                "older_chunk": 1543276,
+                "last_year_trend": -26.99296820529834
+            },
+            {
+                "package_name": "zendframework/zend-httphandlerrunner",
+                "younger_chunk": 131091,
+                "older_chunk": 179705,
+                "last_year_trend": -27.052113185498456
+            },
+            {
+                "package_name": "zendframework/zend-serializer",
+                "younger_chunk": 1017156,
+                "older_chunk": 1405448,
+                "last_year_trend": -27.627631901002374
+            },
+            {
+                "package_name": "zendframework/zend-math",
+                "younger_chunk": 1095583,
+                "older_chunk": 1516778,
+                "last_year_trend": -27.76906046896778
+            },
+            {
+                "package_name": "zendframework/zend-mime",
+                "younger_chunk": 1133899,
+                "older_chunk": 1574097,
+                "last_year_trend": -27.965112696358602
+            },
+            {
+                "package_name": "zendframework/zend-log",
+                "younger_chunk": 1023504,
+                "older_chunk": 1424199,
+                "last_year_trend": -28.134762066256187
+            },
+            {
+                "package_name": "zendframework/zend-mvc",
+                "younger_chunk": 973658,
+                "older_chunk": 1356166,
+                "last_year_trend": -28.205101735333287
+            },
+            {
+                "package_name": "zendframework/zend-mail",
+                "younger_chunk": 1070627,
+                "older_chunk": 1495084,
+                "last_year_trend": -28.390177408092114
+            },
+            {
+                "package_name": "zendframework/zend-stdlib",
+                "younger_chunk": 3934104,
+                "older_chunk": 5499337,
+                "last_year_trend": -28.4622128085622
+            },
+            {
+                "package_name": "zendframework/zend-modulemanager",
+                "younger_chunk": 985311,
+                "older_chunk": 1380396,
+                "last_year_trend": -28.621134804795147
+            },
+            {
+                "package_name": "zendframework/zend-inputfilter",
+                "younger_chunk": 1010548,
+                "older_chunk": 1421206,
+                "last_year_trend": -28.89503703192922
+            },
+            {
+                "package_name": "zendframework/zend-escaper",
+                "younger_chunk": 3302255,
+                "older_chunk": 4658327,
+                "last_year_trend": -29.110708629943744
+            },
+            {
+                "package_name": "zendframework/zend-db",
+                "younger_chunk": 967822,
+                "older_chunk": 1366381,
+                "last_year_trend": -29.168950680666654
+            },
+            {
+                "package_name": "zendframework/zend-crypt",
+                "younger_chunk": 965641,
+                "older_chunk": 1363437,
+                "last_year_trend": -29.1759721938014
+            },
+            {
+                "package_name": "zendframework/zend-form",
+                "younger_chunk": 956750,
+                "older_chunk": 1352246,
+                "last_year_trend": -29.247341090304573
+            },
+            {
+                "package_name": "zendframework/zend-console",
+                "younger_chunk": 943075,
+                "older_chunk": 1335837,
+                "last_year_trend": -29.40194050621446
+            },
+            {
+                "package_name": "zendframework/zend-view",
+                "younger_chunk": 997011,
+                "older_chunk": 1412608,
+                "last_year_trend": -29.420546959949263
+            },
+            {
+                "package_name": "zendframework/zend-component-installer",
+                "younger_chunk": 132726,
+                "older_chunk": 188219,
+                "last_year_trend": -29.48320839022628
+            },
+            {
+                "package_name": "zendframework/zend-expressive-helpers",
+                "younger_chunk": 99146,
+                "older_chunk": 141682,
+                "last_year_trend": -30.02216230713853
+            },
+            {
+                "package_name": "zendframework/zend-di",
+                "younger_chunk": 811931,
+                "older_chunk": 1160520,
+                "last_year_trend": -30.037310860648674
+            },
+            {
+                "package_name": "zendframework/zend-session",
+                "younger_chunk": 903816,
+                "older_chunk": 1298700,
+                "last_year_trend": -30.40609840609841
+            },
+            {
+                "package_name": "zendframework/zend-expressive-template",
+                "younger_chunk": 109310,
+                "older_chunk": 158555,
+                "last_year_trend": -31.058623190690923
+            },
+            {
+                "package_name": "zendframework/zend-barcode",
+                "younger_chunk": 600682,
+                "older_chunk": 873187,
+                "last_year_trend": -31.208091737508695
+            },
+            {
+                "package_name": "zendframework/zend-psr7bridge",
+                "younger_chunk": 791789,
+                "older_chunk": 1155470,
+                "last_year_trend": -31.47472457095381
+            },
+            {
+                "package_name": "zendframework/zend-text",
+                "younger_chunk": 910593,
+                "older_chunk": 1335471,
+                "last_year_trend": -31.814842853195614
+            },
+            {
+                "package_name": "zendframework/zend-expressive",
+                "younger_chunk": 104604,
+                "older_chunk": 153804,
+                "last_year_trend": -31.988764921588526
+            },
+            {
+                "package_name": "zendframework/zend-expressive-router",
+                "younger_chunk": 113438,
+                "older_chunk": 168571,
+                "last_year_trend": -32.70610010025449
+            },
+            {
+                "package_name": "zendframework/zend-captcha",
+                "younger_chunk": 744247,
+                "older_chunk": 1111541,
+                "last_year_trend": -33.043675401986974
+            },
+            {
+                "package_name": "zendframework/zend-diactoros",
+                "younger_chunk": 5382142,
+                "older_chunk": 8218310,
+                "last_year_trend": -34.510355535383795
+            },
+            {
+                "package_name": "zendframework/zend-feed",
+                "younger_chunk": 1115405,
+                "older_chunk": 2469215,
+                "last_year_trend": -54.82754640644901
+            },
+            {
+                "package_name": "zendframework/zend-ldap",
+                "younger_chunk": 109965,
+                "older_chunk": 250673,
+                "last_year_trend": -56.13209240723971
+            }
+        ]
+    },
+    {
+        "vendor_key": "zfcampus",
+        "vendor_name": "Apigility",
+        "vendor_total_last_year": 1234567,
+        "vendor_total_previous_year": 2345678,
+        "packages_data": [
+            {
+                "package_name": "zfcampus/zf-rest",
+                "younger_chunk": 111504,
+                "older_chunk": 107967,
+                "last_year_trend": 3.276001000305655
+            },
+            {
+                "package_name": "zfcampus/zf-hal",
+                "younger_chunk": 118391,
+                "older_chunk": 115972,
+                "last_year_trend": 2.08584830821232
+            },
+            {
+                "package_name": "zfcampus/zf-content-validation",
+                "younger_chunk": 108557,
+                "older_chunk": 108300,
+                "last_year_trend": 0.23730378578024158
+            },
+            {
+                "package_name": "zfcampus/zf-rpc",
+                "younger_chunk": 106353,
+                "older_chunk": 106190,
+                "last_year_trend": 0.15349844618137354
+            },
+            {
+                "package_name": "zfcampus/zf-mvc-auth",
+                "younger_chunk": 113512,
+                "older_chunk": 113451,
+                "last_year_trend": 0.05376770588183888
+            },
+            {
+                "package_name": "zfcampus/zf-apigility",
+                "younger_chunk": 103489,
+                "older_chunk": 103547,
+                "last_year_trend": -0.05601321139192805
+            },
+            {
+                "package_name": "zfcampus/zf-versioning",
+                "younger_chunk": 106297,
+                "older_chunk": 106559,
+                "last_year_trend": -0.2458731782392931
+            },
+            {
+                "package_name": "zfcampus/zf-oauth2",
+                "younger_chunk": 122583,
+                "older_chunk": 123355,
+                "last_year_trend": -0.625836001783469
+            },
+            {
+                "package_name": "zfcampus/zf-apigility-provider",
+                "younger_chunk": 102830,
+                "older_chunk": 103642,
+                "last_year_trend": -0.7834661623666079
+            },
+            {
+                "package_name": "zfcampus/zf-content-negotiation",
+                "younger_chunk": 123183,
+                "older_chunk": 125784,
+                "last_year_trend": -2.0678305666857426
+            },
+            {
+                "package_name": "zfcampus/zf-api-problem",
+                "younger_chunk": 137237,
+                "older_chunk": 141990,
+                "last_year_trend": -3.3474188323121297
+            },
+            {
+                "package_name": "zfcampus/zf-development-mode",
+                "younger_chunk": 189098,
+                "older_chunk": 205114,
+                "last_year_trend": -7.808340727595393
+            }
+        ]
+    }
+]

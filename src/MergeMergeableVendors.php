@@ -49,8 +49,8 @@ final class MergeMergeableVendors
             Assert::isInstanceOf($fullVendorData, VendorData::class);
 
             foreach ($vendorsToMerge as $vendorToMerge) {
-                /** @var VendorData $fullVendorData */
                 $fullVendorData = new VendorData(
+                    /** @var VendorData $fullVendorData */
                     $fullVendorData->getVendorKey(),
                     $fullVendorData->getVendorName(),
                     $fullVendorData->getVendorTotalLastYear() + $vendorToMerge->getVendorTotalLastYear(),

@@ -52,3 +52,16 @@ parameters:
             message: '#Use another value object over array with string-keys and objects, array<string, ValueObject>#'
             paths:
                 - src/MergeMergeableVendors.php
+        -
+            message: '#Parameter "vendorData" cannot be nullable#'
+            paths:
+                - tests/MergeMergeableVendorsTest.php
+        -
+            message: '#Use custom exceptions instead of native "InvalidArgumentException#'
+            paths:
+                - tests/MergeMergeableVendorsTest.php
+        -
+            message: '#Use another value object over array with string-keys and objects, array<string, ValueObject>#'
+            paths:
+                - tests/MergeMergeableVendorsTest.php
+        
