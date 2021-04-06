@@ -31,34 +31,45 @@ final class FrameworkControllerWithDataProvider implements ControllerWithDataPro
      */
     public function getArguments(): array
     {
-        $frameworksVendorToName = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
-        $mergeableVendorList    = $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_MERGEABLE_VENDORS);
-        $excludableVendors      = array_reduce(
-            $mergeableVendorList,
-            fn (array $excludableVendors, array $currentList): array => $this->reduceExcludableVendors(
-                $excludableVendors,
-                $currentList
-            ),
-            []
+        $frameworksVendorToName = $this->removeMergeableVendorsFromFrameworkVendorNames(
+            $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME)
         );
-
-        foreach ($excludableVendors as $excludableVendor) {
-            if (isset($frameworksVendorToName[$excludableVendor])) {
-                unset($frameworksVendorToName[$excludableVendor]);
-            }
-        }
 
         return array_keys($frameworksVendorToName);
     }
 
     /**
-     * @param string[] $excludableVendors
-     * @param string[] $currentList
+     * Remove vendors marked as mergeable from the list of vendors to report.
+     *
+     * @param array<string, string> $frameworksVendorToName
+     * @return array<string,string>
+     */
+    private function removeMergeableVendorsFromFrameworkVendorNames(array $frameworksVendorToName): array
+    {
+        foreach ($this->prepareListOfMergeableVendors() as $mergeableVendor) {
+            if (isset($frameworksVendorToName[$mergeableVendor])) {
+                unset($frameworksVendorToName[$mergeableVendor]);
+            }
+        }
+
+        return $frameworksVendorToName;
+    }
+
+    /**
      * @return string[]
      */
-    private function reduceExcludableVendors(array $excludableVendors, array $currentList): array
+    private function prepareListOfMergeableVendors(): array
     {
-        $excludableVendors = array_merge($excludableVendors, $currentList);
-        return array_unique($excludableVendors);
+        // This reduction operation iterates over each data set in the
+        // Option::FRAMEWORKS_MERGEABLE_VENDORS list, merging the set with prior
+        // sets, and ensuring only unique entries are reported.
+        return array_reduce(
+            $this->parameterProvider->provideArrayParameter(Option::FRAMEWORKS_MERGEABLE_VENDORS),
+            function (array $mergeableVendorList, array $mergeableVendorsForOneVendorInList): array {
+                $mergeableVendorList = array_merge($mergeableVendorList, $mergeableVendorsForOneVendorInList);
+                return array_unique($mergeableVendorList);
+            },
+            []
+        );
     }
 }
