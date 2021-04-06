@@ -7,7 +7,7 @@ namespace TomasVotruba\PhpFwTrends;
 use TomasVotruba\PhpFwTrends\ValueObject\VendorData;
 use Webmozart\Assert\Assert;
 
-final class Merger
+final class MergeMergeableVendors
 {
     public function __construct(
         private MergeableVendors $mergeableVendors

@@ -51,4 +51,4 @@ parameters:
         -
             message: '#Use another value object over array with string-keys and objects, array<string, ValueObject>#'
             paths:
-                - src/Merger.php
+                - src/MergeMergeableVendors.php
