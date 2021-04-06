@@ -20,7 +20,7 @@ final class VendorDataFactory
         private PackageDataFactory $packageDataFactory,
         private Summer $summer,
         private Sorter $sorter,
-        private MergeMergeableVendors $mergeableVendorMerger,
+        private MergeMergeableVendors $mergeMergeableVendors,
     ) {
     }
 
@@ -40,7 +40,7 @@ final class VendorDataFactory
             $this->symfonyStyle->newLine(2);
         }
 
-        $vendorsData = $this->sorter->sortArrayByLastYearTrend($this->mergeableVendorMerger->merge($vendorsData));
+        $vendorsData = $this->sorter->sortArrayByLastYearTrend($this->mergeMergeableVendors->merge($vendorsData));
 
         // metadata
         $nowDateTime = DateTime::from('now');

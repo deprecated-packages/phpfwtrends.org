@@ -42,10 +42,10 @@ final class MergeMergeableVendorsTest extends TestCase
     {
         $data = Json::decode((new SmartFileSystem())->readFile(__DIR__ . '/assets/trend_data.json'), Json::FORCE_ARRAY);
         $vendorsData = [];
-        foreach ($data as $vendor) {
+        foreach ($data as $singleData) {
             $packagesData = [];
-            if (isset($vendor['packages_data'])) {
-                foreach ($vendor['packages_data'] as $packageData) {
+            if (isset($singleData['packages_data'])) {
+                foreach ($singleData['packages_data'] as $packageData) {
                     $packagesData[] = new PackageData(
                         $packageData['package_name'],
                         $packageData['last_year_trend'],
@@ -55,11 +55,11 @@ final class MergeMergeableVendorsTest extends TestCase
                 }
             }
 
-            $vendorsData[$vendor['vendor_key']] = new VendorData(
-                $vendor['vendor_key'],
-                $vendor['vendor_name'],
-                $vendor['vendor_total_last_year'],
-                $vendor['vendor_total_previous_year'],
+            $vendorsData[$singleData['vendor_key']] = new VendorData(
+                $singleData['vendor_key'],
+                $singleData['vendor_name'],
+                $singleData['vendor_total_last_year'],
+                $singleData['vendor_total_previous_year'],
                 $packagesData,
             );
         }
@@ -125,8 +125,8 @@ final class MergeMergeableVendorsTest extends TestCase
     public function testLaminasVendorDataAggregatesTotalsFromMezzioAndApiToolsFollowingMerge(array $vendorsData): void
     {
         $expectedTotals = [
-            'total_last_year' => 78416184,
-            'total_previous_year' => 38650253,
+            'total_last_year' => 78_416_184,
+            'total_previous_year' => 38_650_253,
         ];
 
         $laminasVendorData = $this->getVendorDataFor('laminas', $vendorsData);
@@ -146,8 +146,8 @@ final class MergeMergeableVendorsTest extends TestCase
     public function testZendFrameworkVendorDataAggregatesTotalsFromZfcampusFollowingMerge(array $vendorsData): void
     {
         $expectedTotals = [
-            'total_last_year' => 75502534,
-            'total_previous_year' => 99501340,
+            'total_last_year' => 75_502_534,
+            'total_previous_year' => 99_501_340,
         ];
 
         $zendframeworkVendorData = $this->getVendorDataFor('zendframework', $vendorsData);
