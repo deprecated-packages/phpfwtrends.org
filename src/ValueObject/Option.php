@@ -30,4 +30,9 @@ final class Option
      * @var string
      */
     public const MIN_DOWNLOADS_LIMIT = 'min_downloads_limit';
+
+    /**
+     * @var string/
+     */
+    public const FRAMEWORKS_MERGEABLE_VENDORS = 'frameworks_mergeable_vendors';
 }

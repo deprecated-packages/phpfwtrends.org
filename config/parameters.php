@@ -20,7 +20,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'illuminate' => 'Laravel',
         'cakephp' => 'CakePHP',
         'zendframework' => 'Zend',
+        'zfcampus' => 'Zend',
         'laminas' => 'Laminas',
+        'laminas-api-tools' => 'Laminas',
+        'mezzio' => 'Laminas',
         'yiisoft' => 'Yii',
         'doctrine' => 'Doctrine',
     ]);
@@ -49,10 +52,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'cakephp/elastic-search',
         'cakephp/acl',
         'yiisoft/yii2-apidoc',
-        'zendframework/zend-expressive-*',
         'zendframework/skeleton-application',
         'zendframework/zend-config-*',
         'zendframework/zend-developer-tools',
+        'zfcampus/zf-apigility-skeleton',
         '*/contracts',
         'symfony/*-contracts',
         'symfony/symfony1',
@@ -75,5 +78,15 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'nette/web-project',
         // laminas
         'laminas/laminas-zendframework-bridge',
+        'laminas/laminas-mvc-skeleton',
+        'laminas/laminas-config-*',
+        'laminas/laminas-developer-tools',
+        'laminas-api-tools/api-tools-skeleton',
+        'mezzio/mezzio-skeleton',
+    ]);
+
+    $parameters->set(Option::FRAMEWORKS_MERGEABLE_VENDORS, [
+        'laminas' => ['laminas-api-tools', 'mezzio'],
+        'zendframework' => ['zfcampus'],
     ]);
 };

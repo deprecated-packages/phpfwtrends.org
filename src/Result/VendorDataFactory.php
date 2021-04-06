@@ -6,6 +6,7 @@ namespace TomasVotruba\PhpFwTrends\Result;
 
 use Nette\Utils\DateTime;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use TomasVotruba\PhpFwTrends\MergeMergeableVendors;
 use TomasVotruba\PhpFwTrends\Packagist\VendorPackagesProvider;
 use TomasVotruba\PhpFwTrends\Sorter;
 use TomasVotruba\PhpFwTrends\Summer;
@@ -18,7 +19,8 @@ final class VendorDataFactory
         private VendorPackagesProvider $vendorPackagesProvider,
         private PackageDataFactory $packageDataFactory,
         private Summer $summer,
-        private Sorter $sorter
+        private Sorter $sorter,
+        private MergeMergeableVendors $mergeMergeableVendors,
     ) {
     }
 
@@ -38,7 +40,7 @@ final class VendorDataFactory
             $this->symfonyStyle->newLine(2);
         }
 
-        $vendorsData = $this->sorter->sortArrayByLastYearTrend($vendorsData);
+        $vendorsData = $this->sorter->sortArrayByLastYearTrend($this->mergeMergeableVendors->merge($vendorsData));
 
         // metadata
         $nowDateTime = DateTime::from('now');
@@ -56,15 +58,11 @@ final class VendorDataFactory
         $vendorTotalLastYear = $this->summer->getLastYearTotalArraySum($packagesData);
         $vendorTotalPreviousYear = $this->summer->getPreviousYearTotalArraySum($packagesData);
 
-        $lastYearTrend = ($vendorTotalLastYear / $vendorTotalPreviousYear * 100) - 100;
-        $lastYearTrend = round($lastYearTrend, 0);
-
         return new VendorData(
             $vendorName,
             $frameworkName,
             $vendorTotalLastYear,
             $vendorTotalPreviousYear,
-            $lastYearTrend,
             $packagesData
         );
     }
