@@ -8,6 +8,8 @@ use TomasVotruba\PhpFwTrends\ValueObject\Option;
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
+    $parameters->set('kernel.secret', 123);
+
     // minimal age of package in moths
     $parameters->set(Option::MINIMAL_MONTH_AGE, 12);
 
