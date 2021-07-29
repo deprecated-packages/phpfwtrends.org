@@ -11,6 +11,29 @@
             </strong>
         </h1>
 
+        <br>
+
+        <div class="alert alert-warning" role="alert">
+            <p>
+                This project is based on assumption, that frameworks packages are used one by one via <code>composer require single/package</code>. Monorepo installations like <code>symfony/symfony</code> or <code>illuminate/framework</code> break this design and mixes 2 types of data that cannot be compared.
+            </p>
+
+            <br>
+
+            <p>
+                In short: the <strong>package downloads numbers can't reflect the real framework package use</strong>.
+            </p>
+            <p>
+                That's why I'm <a href="https://tomasvotruba.com/blog/how-i-made-huge-mistake-with-interpretation-of-laravel-downloads">sunsetting this project</a> to avoid more confusion.
+            </p>
+
+            <div class="text-right text-secondary">
+                Tomas Votruba, 2021-07-29
+            </div>
+        </div>
+
+        <br>
+
         <div class="text-center">
             <p class="headline">
                 How much is marketing and how much developers?<br>
