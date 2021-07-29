@@ -1,5 +1,10 @@
 # PHP FW Trends
 
+
+## [2021-07-29] Project is deprecated because it's based on [2 mutually exclusive metrics](https://tomasvotruba.com/blog/how-i-made-huge-mistake-with-interpretation-of-laravel-downloads/)
+
+---
+
 ## Install
 
 ```bash
